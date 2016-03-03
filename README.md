@@ -26,6 +26,6 @@ But only merge them if you've been made a contributor
 
 
 ### Contributors
-Wes Ruvalcaba [wesruv](https://github.com/wesruv)
+[Wes Ruvalcaba](https://github.com/wesruv)
 
 ![Mockup of a homepage using this theme](https://cloud.githubusercontent.com/assets/5607236/13161958/51abbb88-d66f-11e5-8479-5344b177ccf0.png)
