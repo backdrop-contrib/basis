@@ -10,11 +10,13 @@ Candidate for new default theme in Backdrop.
 [See the most recent mockups](https://github.com/backdrop/backdrop-issues/issues/1361#issuecomment-185977384)
 
 ### In this version:
+* Site design is made to work well in the one column layout, will add support for other layouts soon
 * Themed everything needed for homepage
 * Themed most elements that appear on the styleguide
 * Overrode default layout to add a max-content width but have colored bands that stretched across the page
 * Added static markup for elements that were used on homepage
 * Added @todo comments for things that I need to go back and fix
+
 
 ### Contributors
 Wes Ruvalcaba [wesruv](https://github.com/wesruv)
