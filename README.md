@@ -7,7 +7,7 @@ This is currently in alpha and is likely to see major changes.
 #### Feel free to create issues!
 I'd love to get any feedback, features, or issues anyone has while messing around with theme.
 
-####Feel free to create pull requests!**
+####Feel free to create pull requests!
 But only merge them if you've been made a contributor
 
 ### Resources
