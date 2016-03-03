@@ -1,0 +1,26 @@
+name = Basis
+description = The default front-end theme for Backdrop CMS, which can make a great base theme.
+version = 0.1alpha
+type = theme
+backdrop = 1.x
+
+stylesheets[all][] = css/normalize.css
+stylesheets[all][] = css/layout.css
+stylesheets[all][] = css/fonts.css
+stylesheets[all][] = css/hero.css
+stylesheets[all][] = css/cards.css
+stylesheets[all][] = css/quote.css
+stylesheets[all][] = css/get-started.css
+stylesheets[all][] = css/skin.css
+; stylesheets[print][] = css/print.css
+
+; Remove system.theme.css
+; @todo consider removing this...
+stylesheets[all][] = system.theme.css
+
+scripts[] = js/script.js
+
+; We need at least one setting for the theme settings page to appear in the
+; menu. Color module provides our defaults, so we just register a dummy setting.
+settings[color] = true
+settings[main_menu_tabs] = no-tabs
