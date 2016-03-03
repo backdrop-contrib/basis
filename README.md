@@ -1,7 +1,8 @@
 # Basis Theme
 Candidate for new default theme in Backdrop.
 
-**This is currently in alpha and is likely to see major changes!**
+#### Don't use this theme in a real project yet
+This is currently in alpha and is likely to see major changes.
 
 #### Feel free to create issues!
 I'd love to get any feedback, features, or issues anyone has while messing around with theme.
