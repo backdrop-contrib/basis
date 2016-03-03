@@ -3,14 +3,19 @@ Candidate for new default theme in Backdrop.
 
 **This is currently in alpha and is likely to see major changes!**
 
-**Feel free to create issues!** I'd love to get any feedback, features, or issues anyone has while messing around with theme.
-**Feel free to create pull requests!** But 
+#### Feel free to create issues!
+I'd love to get any feedback, features, or issues anyone has while messing around with theme.
+
+####Feel free to create pull requests!**
+But only merge them if you've been made a contributor
+
 [See issue #1361 for more information](https://github.com/backdrop/backdrop-issues/issues/1361)
 
 [See the most recent mockups](https://github.com/backdrop/backdrop-issues/issues/1361#issuecomment-185977384)
 
 ### In this version:
 * Site design is made to work well in the one column layout, will add support for other layouts soon
+* Lots of features added that need fallbacks for older browsers, e.g. lots of flexbox that won't work in old IE
 * Themed everything needed for homepage
 * Themed most elements that appear on the styleguide
 * Overrode default layout to add a max-content width but have colored bands that stretched across the page
