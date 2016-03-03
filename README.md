@@ -9,9 +9,10 @@ I'd love to get any feedback, features, or issues anyone has while messing aroun
 ####Feel free to create pull requests!**
 But only merge them if you've been made a contributor
 
-[See issue #1361 for more information](https://github.com/backdrop/backdrop-issues/issues/1361)
-
-[See the most recent mockups](https://github.com/backdrop/backdrop-issues/issues/1361#issuecomment-185977384)
+### Resources
+* [Repo with theme and config that I'm working from](https://github.com/wesruv/backdrop-starter-theme)
+* [See issue #1361 for more information](https://github.com/backdrop/backdrop-issues/issues/1361)
+* [See the most recent mockups](https://github.com/backdrop/backdrop-issues/issues/1361#issuecomment-185977384)
 
 ### In this version:
 * Site design is made to work well in the one column layout, will add support for other layouts soon
