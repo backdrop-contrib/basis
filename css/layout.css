@@ -5,7 +5,7 @@ html {
 
 body {
   margin: 0;
-  padding: 0 0 8em;
+  padding: 0;
 }
 
 * {
@@ -17,6 +17,10 @@ body {
   margin: 0 auto;
 }
 
+.l-header {
+  margin: 0 0 2rem;
+}
+
 @media (min-width: 550px) {
   .l-header-inner-wrapper {
     display: -webkit-box;
@@ -26,14 +30,15 @@ body {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding: 0 2em;
+    padding: 0 2rem;
     -webkit-box-align: baseline;
     -webkit-align-items: baseline;
     -ms-flex-align: baseline;
     align-items: baseline;
-    min-height: 6.125em;
+    min-height: 6.125rem;
   }
 }
+
 .l-header .block,
 .l-header .block > div {
   -webkit-box-flex: 1;
@@ -51,6 +56,79 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.block-system-header {
+  position: static;
+  float: left;
+  padding: 0 0 0 2rem;
+}
+
+.l-header .site-name {
+  margin: 0.75rem 0;
+}
+
+.l-header .site-slogan {
+  margin: -0.75rem 1.25rem 0 0;
+  padding: 0 0 1.5rem;
+}
+
+.l-header .site-name a {
+  display: inline-block;
+  padding: 0;
+}
+
+@media (min-width: 550px) {
+  .l-header .block-system-header {
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+  }
+
+  .l-header .block-system-main-menu .menu {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 0.4375rem 0;
+  }
+
+  .l-header .block-system-main-menu a {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (min-width: 550px) {
+  .l-header .block-system-user-menu,
+  .l-header .header-menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 12rem;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    padding: 0.5rem;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+
+  .block-system-header .header-menu {
+    float: right;
+    width: auto;
+  }
+
+  .header-menu .links,
+  .l-header .block-system-user-menu .menu {
+    display: block;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
 }
 
 .l-header .menu,
@@ -78,59 +156,34 @@ body {
   flex-grow: 1;
 }
 
-@media (min-width: 550px) {
-  .l-header .block-system-header {
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-  }
-
-  .l-header .block-system-main-menu .menu {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    padding: 0 0 0 2em;
-  }
-
-  .l-header .block-system-main-menu a {
-    padding: 1.5em 1em;
-  }
+.header-menu .links {
+  margin: 0;
+  padding: 0;
 }
-@media (min-width: 550px) {
-  .l-header .block-system-user-menu {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 12rem;
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    padding: 0.5em;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
 
-  .l-header .block-system-user-menu .menu {
-    display: block;
-    -webkit-align-self: flex-end;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-  }
-}
 .l-header .block-system-user-menu .leaf {
   float: none;
 }
 
+.header-menu .links li {
+  float: left;
+  margin: 0;
+}
+
+.header-menu .links li:before,
+.header-menu .links li:after {
+  display: none;
+}
+
+.header-menu .links a {
+  padding: 0.4rem 1rem;
+}
+
 @media (min-width: 550px) {
   .l-header .block-system-user-menu .leaf {
-    font-size: 0.875em;
+    font-size: 0.875rem;
     float: left;
-    margin: 0 0.5em 0 0;
+    margin: 0 0.5rem 0 0;
   }
 
   .l-header .block-system-user-menu .leaf:first-child {
@@ -142,6 +195,24 @@ body {
     padding: 0.5rem 0.5rem 0.25rem;
   }
 }
+
+.layout .l-messages {
+  padding: 0 2rem 2rem;
+}
+
+.l-content,
+.layout--two-column .l-content {
+  padding: 0 2rem;
+}
+
+.l-footer {
+  margin: 1.5rem 0 0;
+}
+
+.l-footer .block-system-powered-by {
+  padding: 0 0 0 2rem;
+}
+
 /**
  * Breadcrumbs
  */
@@ -158,5 +229,27 @@ body {
 
 .breadcrumb li a {
   display: block;
-  padding: 0.5em 0.8em;
+  padding: 0.5rem 0.8rem;
+}
+
+/**
+ * Flex Gallery
+ */
+.flex-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-gallery-item {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-gallery-item {
+  max-width: 100%;
+  padding: 0 1em 1em 0;
 }
