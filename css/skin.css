@@ -105,6 +105,15 @@ h6 {
   font-size: 1rem;
 }
 
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+}
+
 /**
  * Small Text Components
  */
@@ -139,6 +148,14 @@ h6 {
   color: #fff;
   text-align: center;
   background: #0074bd;
+}
+
+.links.inline .node-readmore {
+  display: block;
+}
+
+.links.inline .node-readmore:after {
+  content: '';
 }
 
 /**
@@ -196,55 +213,29 @@ th:last-child {
 }
 
 .l-header .site-name {
-  font-size: 1.7rem;
   font-weight: 200;
   text-align: center;
 }
 
 .l-header .site-slogan {
-  font-size: 0.9rem;
   color: #fff;
 }
 
 @media (min-width: 550px) {
   .l-header .site-name {
-    font-size: 1.7em;
     text-align: left;
   }
 }
-@media (min-width: 850px) {
-  .l-header .site-name {
-    font-size: 2em;
-  }
-}
-.l-header .site-name a {
+
+.l-header .site-name,
+.l-header .site-slogan {
   text-align: center;
-}
-
-.l-header .leaf {
-  font-size: 1em;
-}
-
-@media (min-width: 550px) {
-  .l-header .leaf {
-    font-size: 1.125em;
-  }
-}
-@media (min-width: 850px) {
-  .l-header .leaf {
-    font-size: 1.375em;
-  }
-}
-.l-header .leaf a {
-  display: inline-block;
-  padding: 0.6em 1em;
 }
 
 .l-header .block-system-main-menu {
   text-align: center;
 }
 
-.l-header .header-menu,
 .l-header .block-system-user-menu {
   background: #586172;
 }
@@ -253,54 +244,6 @@ th:last-child {
   .l-header .block-system-user-menu .leaf {
     font-size: 0.875em;
   }
-}
-
-.l-header .header-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-/**
- * Content Teasers
- */
-.content-teasers-wrapper {
-  padding: 0 1em;
-  list-style: none;
-}
-
-@media (min-width: 700px) {
-  .content-teasers-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-.content-teaser-wrapper {
-  padding: 0.5em 1em 1.5em;
-}
-
-@media (min-width: 700px) {
-  .content-teaser-wrapper {
-    padding: 0 1em;
-  }
-}
-@media (min-width: 850px) {
-  .content-teaser-wrapper {
-    padding: 0 1.5em;
-  }
-}
-.content-teaser-headline {
-  margin: 0 0 0.7em;
-}
-
-.content-teaser-headline a {
-  text-decoration: none;
-}
-
-.content-teaser p {
-  margin: 0;
 }
 
 /**
@@ -1064,9 +1007,11 @@ ul.tips {
   padding: 0 1em;
 }
 
+.node-readmore a,
 input.form-submit,
 button.form-submit,
 .button {
+  display: inline-block;
   text-align: center;
   text-transform: uppercase;
   color: #444b53;

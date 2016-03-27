@@ -1,15 +1,26 @@
+* {
+  box-sizing: border-box;
+}
 html {
   position: relative;
-  min-height: 100vh;
 }
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 0 9rem;
 }
 
-* {
-  box-sizing: border-box;
+html,
+body,
+body > .layout {
+  min-height: 100vh;
+}
+
+.admin-bar,
+.admin-bar body,
+.admin-bar body > .layout {
+  /* Dodge admin bar */
+  min-height: calc(100vh - 38px);
 }
 
 .l-site-width-wrapper {
@@ -18,6 +29,7 @@ body {
 }
 
 .l-header {
+  position: relative;
   margin: 0 0 2rem;
 }
 
@@ -31,51 +43,81 @@ body {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 0 2rem;
-    -webkit-box-align: baseline;
-    -webkit-align-items: baseline;
-    -ms-flex-align: baseline;
-    align-items: baseline;
     min-height: 6.125rem;
   }
 }
 
 .l-header .block,
-.l-header .block > div {
+.l-header .block > div,
+/* @todo Want to disable header menu and remove from core */
+.l-header .header-menu {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.l-header .block {
+.l-header .block,
+.l-header .header-menu .links {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
 }
 
-.block-system-header {
-  position: static;
-  float: left;
-  padding: 0 0 0 2rem;
+@media (min-width: 550px) {
+  .block-system-header,
+  .block-system-header .block-content {
+    position: static;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
 }
 
 .l-header .site-name {
-  margin: 0.75rem 0;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0;
 }
 
-.l-header .site-slogan {
-  margin: -0.75rem 1.25rem 0 0;
-  padding: 0 0 1.5rem;
+@media (min-width: 550px) {
+  .l-header .site-name {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 850px) {
+  .l-header .site-name {
+    font-size: 1.75em;
+  }
 }
 
 .l-header .site-name a {
   display: inline-block;
-  padding: 0;
+  padding: 0.75rem 1rem 0.75rem;
+}
+
+@media (min-width: 550px) {
+  .l-header .site-name a {
+    padding-top: 1.25rem;
+    margin-left: -1rem;
+  }
+}
+
+.l-header .site-slogan {
+  margin: -0.75rem 0 0;
+  padding: 0 0 1.5rem;
+  font-size: 0.9rem;
 }
 
 @media (min-width: 550px) {
@@ -86,48 +128,19 @@ body {
     flex-grow: 0;
   }
 
-  .l-header .block-system-main-menu .menu {
+  /* Specific selector to avoid contextual links */
+  .l-header .block-system-main-menu .block-content .menu,
+  .l-header .header-menu .menu {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    padding: 0.4375rem 0;
   }
 
-  .l-header .block-system-main-menu a {
+  /* Specific selector to avoid contextual links */
+  .l-header .block-system-main-menu .block-content a,
+  .l-header .header-menu a {
     padding: 1.5rem 1rem;
-  }
-}
-
-@media (min-width: 550px) {
-  .l-header .block-system-user-menu,
-  .l-header .header-menu {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 12rem;
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    padding: 0.5rem;
-    -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-
-  .block-system-header .header-menu {
-    float: right;
-    width: auto;
-  }
-
-  .header-menu .links,
-  .l-header .block-system-user-menu .menu {
-    display: block;
-    -webkit-align-self: flex-end;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
   }
 }
 
@@ -138,7 +151,32 @@ body {
   padding: 0;
 }
 
-.l-header .menu {
+.l-header .leaf,
+.header-menu li {
+  font-size: 1em;
+}
+
+@media (min-width: 550px) {
+  .l-header .leaf,
+  .header-menu li {
+    font-size: 1.125em;
+  }
+}
+@media (min-width: 850px) {
+  .l-header .leaf,
+  .header-menu li {
+    font-size: 1.375em;
+  }
+}
+
+.l-header .leaf a,
+.header-menu a {
+  display: inline-block;
+  padding: 0.6em 1em;
+}
+
+.l-header .menu,
+.header-menu .links {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -156,7 +194,8 @@ body {
   flex-grow: 1;
 }
 
-.header-menu .links {
+.header-menu .links,
+.header-menu li {
   margin: 0;
   padding: 0;
 }
@@ -165,18 +204,13 @@ body {
   float: none;
 }
 
-.header-menu .links li {
-  float: left;
-  margin: 0;
-}
-
 .header-menu .links li:before,
 .header-menu .links li:after {
   display: none;
 }
 
-.header-menu .links a {
-  padding: 0.4rem 1rem;
+.l-header .block-system-user-menu .menu {
+  display: block;
 }
 
 @media (min-width: 550px) {
@@ -187,7 +221,7 @@ body {
   }
 
   .l-header .block-system-user-menu .leaf:first-child {
-    width: 12em;
+    width: 100%;
     font-size: 1em;
   }
 
@@ -206,6 +240,8 @@ body {
 }
 
 .l-footer {
+  position: absolute;
+  bottom: 0;
   margin: 1.5rem 0 0;
 }
 
@@ -252,4 +288,42 @@ body {
 .flex-gallery-item {
   max-width: 100%;
   padding: 0 1em 1em 0;
+}
+
+/**
+ * Teasers
+ */
+.view-mode-teaser {
+  margin: 2rem 0 0;
+  padding: 2rem 0 0;
+}
+
+.view-mode-teaser:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.view-mode-teaser + .view-mode-teaser {
+  border-top: 0.25rem solid #c6cad2;
+}
+
+.view-mode-teaser h1,
+.view-mode-teaser h2,
+.view-mode-teaser h3,
+.view-mode-teaser h4,
+.view-mode-teaser h5,
+.view-mode-teaser h6 {
+  margin: 0 0 0.5rem;
+}
+
+.view-mode-teaser .align-right {
+  margin: 0 0 1.5rem 1.5rem;
+}
+
+.view-mode-teaser p {
+  margin: 0 0 0.5rem;
+}
+
+.view-mode-teaser .content {
+  margin: 0 0 1.5rem;
 }

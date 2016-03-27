@@ -8,10 +8,14 @@ stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/fonts.css
 stylesheets[all][] = css/hero.css
+stylesheets[all][] = css/content-teaser-row.css
 stylesheets[all][] = css/cards.css
 stylesheets[all][] = css/quote.css
 stylesheets[all][] = css/get-started.css
 stylesheets[all][] = css/skin.css
+
+; Temporarily overriding this - thinking of updating core contextual
+stylesheets[all][] = css/contextual.css
 ; stylesheets[print][] = css/print.css
 
 ; Remove system.theme.css

@@ -1,7 +1,10 @@
 <?php
 /**
  * @file
- * Template for a single column layout.
+ * Template for a 2 column layout.
+ *
+ * This template provides a two column layout with the sidebar on the right and
+ * a roughly 60/40 split.
  *
  * Variables:
  * - $title: The page title, for use in the actual HTML content.
@@ -10,17 +13,19 @@
  *   (e.g., the view and edit tabs when displaying a node).
  * - $action_links: Array of actions local to the page, such as 'Add menu' on
  *   the menu administration interface.
- * - $classes: Array of classes to be added to the layout wrapper.
- * - $attributes: Additional attributes to be added to the layout wrapper.
+ * - $classes: Array of CSS classes to be added to the layout wrapper.
+ * - $attributes: Array of additional HTML attributes to be added to the layout
+ *     wrapper. Flatten using backdrop_attributes().
  * - $content: An array of content, each item in the array is keyed to one
  *   region of the layout. This layout supports the following sections:
  *   - $content['header']
  *   - $content['top']
  *   - $content['content']
+ *   - $content['sidebar']
  *   - $content['footer']
  */
 ?>
-<div class="layout--one-column <?php print implode(' ', $classes); ?>"<?php print backdrop_attributes($attributes); ?>>
+<div class="layout--two-column <?php print implode(' ', $classes); ?>"<?php print backdrop_attributes($attributes); ?>>
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
@@ -50,8 +55,6 @@
   <?php endif; ?>
 
   <div class="l-container">
-    <?php /* Adding these classes on a new wrapper to be consistent with
-      other layouts */ ?>
     <div class="l-site-width-wrapper clearfix l-container-inner-wrapper">
       <main class="l-content" role="main">
         <a id="main-content"></a>
@@ -72,6 +75,12 @@
         <?php print $action_links; ?>
         <?php print $content['content']; ?>
       </main>
+
+      <?php if ($content['sidebar']): ?>
+        <div class="l-sidebar">
+          <?php print $content['sidebar']; ?>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 

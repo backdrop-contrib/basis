@@ -1,3 +1,7 @@
+/**
+ * Custom Hero Component
+ * @todo create config to make this work
+ */
 .hero {
   margin: -2em 0 0; /* So it's flush with the header */
   background: #0074bd url(../images/texture.png) no-repeat center center;
