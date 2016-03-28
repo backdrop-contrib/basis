@@ -1,30 +1,27 @@
 * {
   box-sizing: border-box;
 }
+
+#check-font-wrapper {
+  position: absolute; /* @todo make this update to core */
+}
+
 html {
   position: relative;
-}
-
-body {
-  margin: 0;
-  padding: 0 0 9rem;
-}
-
-html,
-body,
-body > .layout {
   min-height: 100vh;
 }
 
-.admin-bar,
-.admin-bar body,
-.admin-bar body > .layout {
+.admin-bar {
   /* Dodge admin bar */
-  min-height: calc(100vh - 38px);
+  min-height: calc(100vh - 38px); /* @todo add class for mobile admin bar */
+}
+
+.admin-bar body {
+  border: 0!important;/* Remove !important from admin-menu */
+  padding-top: 38px;
 }
 
 .l-site-width-wrapper {
-  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -42,7 +39,6 @@ body > .layout {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding: 0 2rem;
     min-height: 6.125rem;
   }
 }
@@ -234,14 +230,7 @@ body > .layout {
   padding: 0 2rem 2rem;
 }
 
-.l-content,
-.layout--two-column .l-content {
-  padding: 0 2rem;
-}
-
 .l-footer {
-  position: absolute;
-  bottom: 0;
   margin: 1.5rem 0 0;
 }
 

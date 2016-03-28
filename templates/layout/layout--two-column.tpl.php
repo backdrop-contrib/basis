@@ -32,7 +32,7 @@
 
   <?php if ($content['header']): ?>
     <header class="l-header" role="banner" aria-label="<?php print t('Site header'); ?>">
-      <div class="l-site-width-wrapper clearfix l-header-inner-wrapper">
+      <div class="l-site-width-wrapper l-header-inner-wrapper">
         <?php print $content['header']; ?>
       </div>
     </header>
@@ -48,14 +48,14 @@
 
   <?php if ($content['top']): ?>
     <div class="l-top">
-      <div class="l-site-width-wrapper clearfix l-top-inner-wrapper">
+      <div class="l-site-width-wrapper l-top-inner-wrapper">
         <?php print $content['top']; ?>
       </div>
     </div>
   <?php endif; ?>
 
   <div class="l-container">
-    <div class="l-site-width-wrapper clearfix l-container-inner-wrapper">
+    <div class="l-site-width-wrapper l-container-inner-wrapper">
       <main class="l-content" role="main">
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
@@ -86,7 +86,7 @@
 
   <?php if ($content['footer']): ?>
     <footer class="l-footer">
-      <div class="l-site-width-wrapper clearfix l-footer-inner-wrapper">
+      <div class="l-site-width-wrapper l-footer-inner-wrapper">
         <?php print $content['footer']; ?>
       </div>
     </footer>
