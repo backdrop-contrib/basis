@@ -32,31 +32,37 @@
 
   <?php if ($content['header']): ?>
     <header class="l-header" role="banner" aria-label="<?php print t('Site header'); ?>">
-      <div class="l-site-width-wrapper l-header-inner-wrapper">
-        <?php print $content['header']; ?>
+      <div class="l-header-inner-wrapper l-site-width-wrapper l-row">
+        <div class="l-header-innermost-wrapper l-col-xs-12">
+          <?php print $content['header']; ?>
+        </div>
       </div>
     </header>
   <?php endif; ?>
 
   <?php if ($messages): ?>
     <div class="l-messages">
-      <div class="l-site-width-wrapper clearfix">
-        <?php print $messages; ?>
+      <div class="l-messages-inner-wrapper l-site-width-wrapper l-row">
+        <div class="l-messages-innermost-wrapper l-site-width-wrapper l-col-xs-12">
+          <?php print $messages; ?>
+        </div>
       </div>
     </div>
   <?php endif; ?>
 
   <?php if ($content['top']): ?>
     <div class="l-top">
-      <div class="l-site-width-wrapper l-top-inner-wrapper">
-        <?php print $content['top']; ?>
+      <div class="l-top-inner-wrapper l-site-width-wrapper l-row">
+        <div class="l-top-innermost-wrapper l-col-xs-12">
+          <?php print $content['top']; ?>
+        </div>
       </div>
     </div>
   <?php endif; ?>
 
   <div class="l-container">
-    <div class="l-site-width-wrapper l-container-inner-wrapper">
-      <main class="l-content" role="main">
+    <div class="l-container-inner-wrapper l-site-width-wrapper l-row">
+      <main class="l-content l-col-xs-12 l-col-lg-9" role="main">
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
         <?php if ($title): ?>
@@ -77,7 +83,7 @@
       </main>
 
       <?php if ($content['sidebar']): ?>
-        <div class="l-sidebar">
+        <div class="l-sidebar l-col-xs-12 l-col-lg-3">
           <?php print $content['sidebar']; ?>
         </div>
       <?php endif; ?>
@@ -86,9 +92,11 @@
 
   <?php if ($content['footer']): ?>
     <footer class="l-footer">
-      <div class="l-site-width-wrapper l-footer-inner-wrapper">
-        <?php print $content['footer']; ?>
-      </div>
+        <div class="l-footer-bottom">
+          <div class="l-site-width-wrapper l-footer-bottom-inner-wrapper">
+            <?php print $content['footer']; ?>
+          </div>
+        </div>
     </footer>
   <?php endif; ?>
 </div>

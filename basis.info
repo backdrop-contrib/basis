@@ -24,6 +24,8 @@ stylesheets[all][] = css/contextual.css
 ; @todo consider removing this, or fixing issues in core
 stylesheets[all][] = system.theme.css
 stylesheets[all][] = three-three-four-column.css
+stylesheets[all][] = two-column.css
+stylesheets[all][] = two-column-flipped.css
 
 scripts[] = js/script.js
 

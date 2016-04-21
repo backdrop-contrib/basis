@@ -121,31 +121,33 @@
 
   <?php if ($content['footer'] || $content['footer_firstcolumn'] || $content['footer_secondcolumn'] || $content['footer_thirdcolumn'] || $content['footer_fourthcolumn']): ?>
     <footer class="l-footer">
+      <div class="l-site-width-wrapper l-footer-inner-wrapper">
       <?php if ($content['footer_firstcolumn'] || $content['footer_secondcolumn'] || $content['footer_thirdcolumn'] || $content['footer_fourthcolumn']): ?>
         <div class="l-footer-columns">
-          <div class="l-site-width-wrapper l-footer-columns-inner-wrapper">
-            <div class="l-footer-first-column">
+          <div class="l-site-width-wrapper l-footer-columns-inner-wrapper l-row">
+            <div class="l-footer-first-column l-col-xs-12 l-col-md-6 l-col-lg-3">
               <?php print $content['footer_firstcolumn']; ?>
             </div>
-            <div class="l-footer-second-column">
+            <div class="l-footer-second-column l-col-xs-12 l-col-md-6 l-col-lg-3">
               <?php print $content['footer_secondcolumn']; ?>
             </div>
-            <div class="l-footer-third-column">
+            <div class="l-footer-third-column l-col-xs-12 l-col-md-6 l-col-lg-3">
               <?php print $content['footer_thirdcolumn']; ?>
             </div>
-            <div class="l-footer-fourth-column">
+            <div class="l-footer-fourth-column l-col-xs-12 l-col-md-6 l-col-lg-3">
               <?php print $content['footer_fourthcolumn']; ?>
             </div>
           </div>
         </div>
       <?php endif; ?>
       <?php if ($content['footer']): ?>
-        <div class="l-footer-bottom">
-          <div class="l-site-width-wrapper l-footer-bottom-inner-wrapper">
+        <div class="l-footer-bottom l-row">
+          <div class="l-footer-bottom-inner l-col-xs-12">
             <?php print $content['footer']; ?>
           </div>
         </div>
       <?php endif; ?>
+      </div>
     </footer>
   <?php endif; ?>
 </div>

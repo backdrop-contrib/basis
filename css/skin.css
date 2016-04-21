@@ -257,13 +257,6 @@ th:last-child {
   margin: 5em 0 0;
 }
 
-.l-footer-inner-wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 /**
  * Powered by Backdrop Block
  */
