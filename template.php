@@ -13,7 +13,7 @@ function basis_preprocess_layout(&$variables) {
  * Implements hook_preprocess_menu_local_tasks().
  */
 function basis_preprocess_menu_local_tasks(&$variables) {
-  $theme_path = backdrop_get_path('theme', 'drop');
+  $theme_path = backdrop_get_path('theme', 'basis');
   $seven_theme_path = backdrop_get_path('theme', 'seven');
 
   // @todo put responsive tabs in a more central place
@@ -35,7 +35,7 @@ function basis_preprocess_fieldset(&$variables) {
  * Implements hook_preprocess_vertical_tabs().
  */
 function basis_preprocess_vertical_tabs(&$variables) {
-  $theme_path = backdrop_get_path('theme', 'drop');
+  $theme_path = backdrop_get_path('theme', 'basis');
   backdrop_add_css($theme_path . '/css/vertical-tabs.css');
 }
 

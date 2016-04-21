@@ -180,11 +180,13 @@ sub {
 
 /**
  * Remove border when inside `a` element in IE 8/9/10.
+ * Make all images responsive by default
  */
 
 img {
   border: 0;
   max-width: 100%;
+  height: auto;
 }
 
 /**

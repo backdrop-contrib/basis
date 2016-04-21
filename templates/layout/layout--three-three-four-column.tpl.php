@@ -32,15 +32,15 @@
  *   - $content['footer']
  */
 ?>
-<div class="layout--three-three-four-column <?php print implode(' ', $classes); ?>"<?php print backdrop_attributes($attributes); ?>>
+<div class="l-layout l-layout--three-three-four-column <?php print implode(' ', $classes); ?>"<?php print backdrop_attributes($attributes); ?>>
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
 
   <?php if ($content['header']): ?>
     <header class="l-header" role="banner" aria-label="<?php print t('Site header'); ?>">
-      <div class="l-site-width-wrapper l-row">
-        <div class="l-col-xs-12 l-header-inner-wrapper">
+      <div class="l-header-inner-wrapper l-site-width-wrapper l-row">
+        <div class="l-header-innermost-wrapper l-col-xs-12">
           <?php print $content['header']; ?>
         </div>
       </div>
@@ -48,17 +48,19 @@
   <?php endif; ?>
 
   <?php if ($messages): ?>
-    <div class="l-messages l-row">
-      <div class="l-site-width-wrapper l-col-xs-12">
-        <?php print $messages; ?>
+    <div class="l-messages">
+      <div class="l-messages-inner-wrapper l-site-width-wrapper l-row">
+        <div class="l-messages-innermost-wrapper l-site-width-wrapper l-col-xs-12">
+          <?php print $messages; ?>
+        </div>
       </div>
     </div>
   <?php endif; ?>
 
   <?php if ($content['top']): ?>
     <div class="l-top">
-      <div class="l-site-width-wrapper l-top-inner-wrapper l-row">
-        <div class="l-col-xs-12">
+      <div class="l-top-inner-wrapper l-site-width-wrapper l-row">
+        <div class="l-top-innermost-wrapper l-col-xs-12">
           <?php print $content['top']; ?>
         </div>
       </div>
@@ -66,7 +68,7 @@
   <?php endif; ?>
 
   <div class="l-container">
-    <div class="l-site-width-wrapper l-container-inner-wrapper l-row">
+    <div class="l-container-inner-wrapper l-site-width-wrapper l-row">
       <main class="l-content l-col-xs-12 l-col-lg-6 l-order-lg-1" role="main">
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
@@ -102,15 +104,15 @@
   </div>
 
   <?php if ($content['triptych_first'] || $content['triptych_middle'] || $content['triptych_last']): ?>
-    <div class="l-triptych l-row">
-      <div class="l-site-width-wrapper l-triptych-inner-wrapper">
-        <div class="l-triptych-first">
+    <div class="l-triptych">
+      <div class="l-triptych-inner-wrapper l-site-width-wrapper l-row">
+        <div class="l-triptych-first l-col-md-6 l-col-lg-4">
           <?php print $content['triptych_first']; ?>
         </div>
-        <div class="l-triptych-middle">
+        <div class="l-triptych-middle l-col-md-6 l-col-lg-4">
           <?php print $content['triptych_middle']; ?>
         </div>
-        <div class="l-triptych-last">
+        <div class="l-triptych-last l-col-md-6 l-col-lg-4">
           <?php print $content['triptych_last']; ?>
         </div>
       </div>

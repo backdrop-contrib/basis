@@ -12,28 +12,25 @@
 }
 
 @media (min-width: 550px) {
-  .l-grid-container,
-  .l-site-width-wrapper {
+  .l-grid-container-static {
     max-width: 550px;
   }
 }
 
 @media (min-width: 750px) {
-  .l-grid-container,
-  .l-site-width-wrapper {
+  .l-grid-container-static {
     max-width: 750px;
   }
 }
 
 @media (min-width: 950px) {
-  .l-grid-container,
-  .l-site-width-wrapper {
+  .l-grid-container-static {
     max-width: 950px;
   }
 }
 
 @media (min-width: 1150px) {
-  .l-grid-container,
+  .l-grid-container-static,
   .l-site-width-wrapper {
     max-width: 1150px;
   }

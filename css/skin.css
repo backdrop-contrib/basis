@@ -1,10 +1,6 @@
 /**
  * HTML Elements
  */
-html {
-  background: #20252e;
-}
-
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -255,9 +251,9 @@ th:last-child {
  * Footer styles
  */
 .l-footer {
-  background: #20252e;
+  border-top: 0.25rem solid #c6cad2;
   line-height: 3em;
-  color: #fff;
+  padding: 0.5em 0 1em;
   margin: 5em 0 0;
 }
 
@@ -266,10 +262,6 @@ th:last-child {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.l-footer a {
-  color: #fff;
 }
 
 /**
