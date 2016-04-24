@@ -5,23 +5,22 @@ type = theme
 backdrop = 1.x
 
 stylesheets[all][] = css/normalize.css
-stylesheets[all][] = css/grid-system-flex.css
+stylesheets[all][] = css/grid-system/flexbox-grid.css
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/fonts.css
-stylesheets[all][] = css/hero.css
-stylesheets[all][] = css/content-teaser-row.css
-stylesheets[all][] = css/cards.css
-stylesheets[all][] = css/quote.css
-stylesheets[all][] = css/get-started.css
-stylesheets[all][] = css/admin-tabs.css
+stylesheets[all][] = css/component/hero.css
+stylesheets[all][] = css/component/content-teaser-row.css
+stylesheets[all][] = css/component/cards.css
+stylesheets[all][] = css/component/quote.css
+stylesheets[all][] = css/component/get-started.css
+stylesheets[all][] = css/component/admin-tabs.css
 stylesheets[all][] = css/skin.css
+; @todo stylesheets[print][] = css/print.css
 
 ; Temporarily overriding this - thinking of updating core contextual
-stylesheets[all][] = css/contextual.css
-; stylesheets[print][] = css/print.css
+stylesheets[all][] = css/component/contextual.css
 
-; Remove system.theme.css
-; @todo consider removing this, or fixing issues in core
+; Remove unwanted upstream CSS
 stylesheets[all][] = system.theme.css
 stylesheets[all][] = three-three-four-column.css
 stylesheets[all][] = two-column.css

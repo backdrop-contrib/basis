@@ -18,7 +18,7 @@ function basis_preprocess_menu_local_tasks(&$variables) {
 
   // @todo put responsive tabs in a more central place
   backdrop_add_js($seven_theme_path . '/js/script.js');
-  backdrop_add_css($theme_path . '/css/admin-tabs.css');
+  backdrop_add_css($theme_path . '/css/component/admin-tabs.css');
 }
 
 /**
@@ -36,7 +36,7 @@ function basis_preprocess_fieldset(&$variables) {
  */
 function basis_preprocess_vertical_tabs(&$variables) {
   $theme_path = backdrop_get_path('theme', 'basis');
-  backdrop_add_css($theme_path . '/css/vertical-tabs.css');
+  backdrop_add_css($theme_path . '/css/component/vertical-tabs.css');
 }
 
 /**

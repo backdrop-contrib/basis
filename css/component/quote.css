@@ -22,7 +22,7 @@
   max-width: 950px;
   padding: 0 2em;
 }
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .quote-primary-inner-wrapper {
     padding: 0 4em;
   }
@@ -32,12 +32,12 @@
   margin: 0 0 0.5em;
   font-size: 1.3em;
 }
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .quote-content {
     font-size: 1.7em;
   }
 }
-@media (min-width: 850px) {
+@media (min-width: 55em) {
   .quote-content {
     font-size: 2em;
   }
@@ -47,12 +47,12 @@
   font-size: 1em;
   float: right;
 }
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .quote-citation {
     font-size: 1.1em;
   }
 }
-@media (min-width: 850px) {
+@media (min-width: 55em) {
   .quote-citation {
     font-size: 1.2em;
   }

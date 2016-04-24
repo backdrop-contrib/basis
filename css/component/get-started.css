@@ -22,7 +22,7 @@
   will-change: transform;
   backface-visibility: hidden;
 }
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .get-started-pane-outer-wrapper {
     /* Can't use calc in trasform in Safari 7 so translate 2x instead */
     -webkit-transform:
@@ -42,7 +42,7 @@
   transform: translate(0, -50%);
 }
 
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .get-started-pane-outer-wrapper.js-toggled {
     /* Can't use calc in trasform in Safari 7 so translate 2x instead */
     -webkit-transform:
@@ -183,7 +183,7 @@
   display: block;
   height: 1.7em;
 }
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .get-started-pane-checkboxes:before {
     float: right;
     width: 5.5em;

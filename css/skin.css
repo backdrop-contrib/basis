@@ -222,7 +222,7 @@ th:last-child {
   color: #fff;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .l-header .site-name {
     text-align: left;
   }
@@ -241,7 +241,7 @@ th:last-child {
   background: #586172;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .l-header .block-system-user-menu .leaf {
     font-size: 0.875em;
   }
@@ -752,7 +752,7 @@ abbr.tabledrag-changed {
   margin: 0;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 35em) {
   .messages {
     padding-left: 4.375em;
   }
@@ -809,7 +809,7 @@ div.error:before {
 }
 
 /* Desktop size icons */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 35em) {
   div.status:before {
     background-image: url(../../../core/misc/message-32-ok.png);
   }
@@ -1334,7 +1334,7 @@ fieldset .fieldset-wrapper {
   display: none;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 30em) {
   .fieldset-legend span.summary {
     display: block;
   }
@@ -1370,7 +1370,7 @@ ul.pager {
   display: none;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .pager-item,
   .pager-ellipsis {
     display: block;

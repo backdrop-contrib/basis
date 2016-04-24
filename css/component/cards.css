@@ -6,7 +6,7 @@
   padding: 0.4em 0.4em;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 55em) {
   .cards-inner-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -19,7 +19,7 @@
   background: #0074bd url(../images/texture.png) no-repeat 10% center;
   background-blend-mode: luminosity;
 }
-@media (min-width: 850px) {
+@media (min-width: 55em) {
   .card {
     width: 33.333%;
   }
@@ -39,12 +39,12 @@
   height: 0;
   padding: 50% 0 0;
 }
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .card:after {
     padding: 20% 0 0;
   }
 }
-@media (min-width: 850px) {
+@media (min-width: 55em) {
   .card:after {
     padding: 60% 0 0;
   }

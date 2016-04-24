@@ -12,13 +12,13 @@
   padding: 1.5rem 3.5rem 2rem 2.5rem;
   font-size: 1em;
 }
-@media (min-width: 400px) {
+@media (min-width: 25em) {
   .hero-content {
     padding: 2rem 3.5rem 3rem 3rem;
     font-size: 1.3em;
   }
 }
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .hero-content {
     font-size: 1.5em;
   }
@@ -31,7 +31,7 @@
   line-height: 1.2;
   font-size: 2.3em;
 }
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .hero-title {
     font-size: 2.667em;
   }

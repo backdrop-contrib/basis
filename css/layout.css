@@ -6,11 +6,6 @@
   position: absolute; /* @todo make this update to core */
 }
 
-html {
-  position: relative;
-  min-height: 100vh;
-}
-
 .admin-bar {
   /* Dodge admin bar */
   min-height: calc(100vh - 38px); /* @todo add class for mobile admin bar */
@@ -21,17 +16,12 @@ html {
   padding-top: 38px;
 }
 
-.l-site-width-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .l-header {
   position: relative;
   margin: 0 0 2rem;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .l-header-innermost-wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -55,18 +45,50 @@ html {
 }
 
 .l-header .block,
+.l-header .block > div,
+/* @todo Want to disable header menu and remove from core */
+.l-header .header-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.l-header .block,
 .l-header .header-menu .links {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: flex-start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 35em) {
+  .l-header .header-menu .links {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
   .block-system-header,
   .block-system-header .block-content {
     position: static;
@@ -74,6 +96,9 @@ html {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-align: flex-start;
     -webkit-align-items: flex-start;
     -ms-flex-align: flex-start;
@@ -81,43 +106,115 @@ html {
   }
 }
 
-.l-header .site-name {
+.header-identity-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 1rem 0 0;
+}
+
+@media (min-width: 35em) {
+  .header-identity-wrapper {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+}
+
+.header-logo-wrapper {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+/* @todo Add class for tall or wide logo */
+.header-logo-link {
+  display: block;
+  min-width: 4em;
+  max-width: 6rem;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 1.25rem 0;
+}
+
+.header-name-and-slogan-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.header-site-name-link {
+  display: block;
+}
+
+.header-site-name-wrapper {
   font-size: 1.25rem;
   margin: 0;
   padding: 0;
 }
 
-@media (min-width: 550px) {
-  .l-header .site-name {
+@media (min-width: 35em) {
+  .header-site-name-wrapper {
     font-size: 1.5em;
   }
 }
 
-@media (min-width: 850px) {
-  .l-header .site-name {
+@media (min-width: 55em) {
+  .header-site-name-wrapper {
     font-size: 1.75em;
   }
 }
 
-.l-header .site-name a {
+.header-site-name-link {
   display: inline-block;
+  margin: 0 -1rem;
   padding: 0.75rem 1rem 0.75rem;
 }
 
-@media (min-width: 550px) {
-  .l-header .site-name a {
+@media (min-width: 35em) {
+  .header-site-name-link {
     padding-top: 1.25rem;
     margin-left: -1rem;
   }
 }
 
-.l-header .site-slogan {
-  margin: -0.75rem 0 0;
-  padding: 0 0 1.5rem;
+.header-site-slogan {
+  margin: -0.75em 0 0;
+  padding: 0 0 1rem;
   font-size: 0.9rem;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 35em) {
+  .header-menu {
+    min-width: 30%;
+  }
+}
+
+@media (min-width: 55em) {
+  .header-menu {
+    min-width: 0;
+  }
+}
+
+@media (min-width: 35em) {
   .l-header .block-system-header {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -153,13 +250,13 @@ html {
   font-size: 1em;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .l-header .leaf,
   .header-menu li {
     font-size: 1.125em;
   }
 }
-@media (min-width: 850px) {
+@media (min-width: 55em) {
   .l-header .leaf,
   .header-menu li {
     font-size: 1.375em;
@@ -217,7 +314,7 @@ html {
   display: block;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 35em) {
   .l-header .block-system-user-menu .leaf {
     font-size: 0.875rem;
     float: left;

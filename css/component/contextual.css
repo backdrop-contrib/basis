@@ -39,13 +39,17 @@
   height: 40px;  /* IE8 fallback */
   height: 2.25rem;
   overflow: hidden;
-  border: 1px solid transparent;
+  border: 1px solid #ccc;
   margin: 0;
   padding: 0 2px; /* IE8 fallback */
   padding: 0 0.125rem;
   outline: none;
   text-indent: -9999em;
   text-align: left;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.7);
+  transition: background-color 0.2s;
+  will-change: background;
 }
 
 .contextual-links-region .contextual-links-trigger:before {
@@ -59,12 +63,19 @@
   /* Icon dimensions */
   width: 28px;
   height: 18px;
-  background: transparent url(../images/gear-select.png) no-repeat center top;
+  background: url(../../images/gear-select.png) no-repeat center top;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  will-change: opacity;
+}
+
+.contextual-links-region .contextual-links-trigger:hover {
+  background: #ffffff;
 }
 
 .contextual-links-region .contextual-links-trigger:hover:before,
 .contextual-links-region .contextual-links-active .contextual-links-trigger:before {
-  background-position: center bottom;
+  opacity: 1;
 }
 
 .contextual-links-region .contextual-links-active .contextual-links-trigger {

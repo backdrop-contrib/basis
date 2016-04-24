@@ -116,7 +116,7 @@ ul.primary li:last-child a {
   border-radius: 0 4px 0 0;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 35em) {
   ul.primary li {
     float: none;
     margin-bottom: 2px;
