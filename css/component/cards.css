@@ -16,7 +16,7 @@
 
 .card {
   border: 0.4em solid #586172;
-  background: #0074bd url(../images/texture.png) no-repeat 10% center;
+  background: #0074bd url(../../images/texture.png) no-repeat 10% center;
   background-blend-mode: luminosity;
 }
 @media (min-width: 55em) {

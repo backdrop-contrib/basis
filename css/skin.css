@@ -784,7 +784,7 @@ abbr.tabledrag-changed {
 }
 
 div.status:before {
-  background-image: url(../../../core/misc/message-24-ok.png);
+  background-image: url(/core/misc/message-24-ok.png);
   background-color: #CFDE56;
 }
 
@@ -794,7 +794,7 @@ div.status:before {
 }
 
 div.warning:before {
-  background-image: url(../../../core/misc/message-24-warning.png);
+  background-image: url(/core/misc/message-24-warning.png);
   background-color: #FCE400;
 }
 
@@ -804,38 +804,38 @@ div.warning:before {
 }
 
 div.error:before {
-  background-image: url(../../../core/misc/message-24-error.png);
+  background-image: url(/core/misc/message-24-error.png);
   background-color: #EE3D23;
 }
 
 /* Desktop size icons */
 @media only screen and (min-width: 35em) {
   div.status:before {
-    background-image: url(../../../core/misc/message-32-ok.png);
+    background-image: url(/core/misc/message-32-ok.png);
   }
 
   div.warning:before {
-    background-image: url(../../../core/misc/message-32-warning.png);
+    background-image: url(/core/misc/message-32-warning.png);
   }
 
   div.error:before {
-    background-image: url(../../../core/misc/message-32-error.png);
+    background-image: url(/core/misc/message-32-error.png);
   }
 }
 /* SVG overrides */
 div.status:before {
-  background-image: -webkit-linear-gradient(transparent, transparent), url(../../../core/misc/message-ok.svg);
-  background-image: linear-gradient(transparent, transparent), url(../../../core/misc/message-ok.svg);
+  background-image: -webkit-linear-gradient(transparent, transparent), url(/core/misc/message-ok.svg);
+  background-image: linear-gradient(transparent, transparent), url(/core/misc/message-ok.svg);
 }
 
 div.warning:before {
-  background-image: -webkit-linear-gradient(transparent, transparent), url(../../../core/misc/message-warning.svg);
-  background-image: linear-gradient(transparent, transparent), url(../../../core/misc/message-warning.svg);
+  background-image: -webkit-linear-gradient(transparent, transparent), url(/core/misc/message-warning.svg);
+  background-image: linear-gradient(transparent, transparent), url(/core/misc/message-warning.svg);
 }
 
 div.error:before {
-  background-image: -webkit-linear-gradient(transparent, transparent), url(../../../core/misc/message-error.svg);
-  background-image: linear-gradient(transparent, transparent), url(../../../core/misc/message-error.svg);
+  background-image: -webkit-linear-gradient(transparent, transparent), url(/core/misc/message-error.svg);
+  background-image: linear-gradient(transparent, transparent), url(/core/misc/message-error.svg);
 }
 
 /**
