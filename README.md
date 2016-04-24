@@ -16,13 +16,15 @@ But only merge them if you've been made a contributor
 * [See the most recent mockups](https://github.com/backdrop/backdrop-issues/issues/1361#issuecomment-185977384)
 
 ### In this version:
-* Site design is made to work well in the one column layout, will add support for other layouts soon
-* Lots of features added that need fallbacks for older browsers, e.g. lots of flexbox that won't work in old IE
-* Themed everything needed for homepage
+* Grid system using Flexbox, based on Bootstrap 4
+	* Fallback to float for old/crappy browsers not done yet  
+* All Core templates overridden to use grid classes
+* Documentation for [CSS](https://github.com/backdrop-contrib/basis/tree/master/css) and [Grid System](https://github.com/backdrop-contrib/basis/tree/master/css/grid-system)
+* Themed default Backdrop config
+* Themed everything needed for homepage design
 * Themed most elements that appear on the styleguide
-* Overrode default layout to add a max-content width but have colored bands that stretched across the page
 * Added static markup for elements that were used on homepage
-* Added @todo comments for things that I need to go back and fix
+* Need to add fallbacks for older browsers, e.g. lots of flexbox that won't work in old IE
 
 
 ### Contributors
