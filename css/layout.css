@@ -65,6 +65,18 @@
   align-items: stretch;
 }
 
+@media (min-width: 35em) {
+.l-header .block,
+.l-header .block > div,
+/* @todo Want to disable header menu and remove from core */
+.l-header .header-menu {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
 .l-header .block,
 .l-header .header-menu .links {
   display: -webkit-box;
