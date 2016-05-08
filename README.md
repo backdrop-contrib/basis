@@ -1,8 +1,10 @@
 # Basis Theme
 Candidate for new default theme in Backdrop.
 
-#### Don't use this theme in a real project yet
-This is currently in alpha and is likely to see major changes.
+## No longer working in this repo!
+We're now working on getting this theme into core for a beta in 1.4, and hopefully make it the default theme in 1.5.
+
+If you want the latest and greatest, check https://github.com/biolithic/backdroplayouts
 
 #### Feel free to create issues!
 I'd love to get any feedback, features, or issues anyone has while messing around with theme.
