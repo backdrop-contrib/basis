@@ -1,11 +1,6 @@
 # Basis Theme
 Candidate for new default theme in Backdrop.
 
-## No longer working in this repo!
-We're now working on getting this theme into core for a beta in 1.4, and hopefully make it the default theme in 1.5.
-
-If you want the latest and greatest, check https://github.com/biolithic/backdroplayouts
-
 #### Feel free to create issues!
 I'd love to get any feedback, features, or issues anyone has while messing around with theme.
 
@@ -18,19 +13,16 @@ But only merge them if you've been made a contributor
 * [See the most recent mockups](https://github.com/backdrop/backdrop-issues/issues/1361#issuecomment-185977384)
 
 ### In this version:
-* Grid system using Flexbox, based on Bootstrap 4
-	* Fallback to float for old/crappy browsers not done yet  
-* All Core templates overridden to use grid classes
-* Documentation for [CSS](https://github.com/backdrop-contrib/basis/tree/master/css) and [Grid System](https://github.com/backdrop-contrib/basis/tree/master/css/grid-system)
 * Themed default Backdrop config
 * Themed everything needed for homepage design
-* Themed most elements that appear on the styleguide
+* Themed all elements that appear on the Styleguide
 * Added static markup for elements that were used on homepage
-* Need to add fallbacks for older browsers, e.g. lots of flexbox that won't work in old IE
-
+* Flexbox fallbacks
 
 ### Contributors
-[Wes Ruvalcaba](https://github.com/wesruv)
+* [Wes Ruvalcaba](https://github.com/wesruv)
+* (Looking for more!)
+
 
 ### Mockup
 ![Mockup of a homepage using this theme](https://cloud.githubusercontent.com/assets/5607236/13161958/51abbb88-d66f-11e5-8479-5344b177ccf0.png)
