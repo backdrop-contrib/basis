@@ -30,21 +30,11 @@
     <?php endif; ?>
     <?php if ($site_name || $slogan): ?>
       <div class="header-name-and-slogan-wrapper">
-        <?php if (!$is_front): ?>
-          <div class="header-site-name-wrapper">
-            <strong>
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header-site-name-link" rel="home">
-                <?php print $site_name; ?>
-              </a>
-            </strong>
-          </div>
-        <?php else: /* Use h1 when the content title is empty */ ?>
-          <h1 class="header-site-name-wrapper">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header-site-name-link" rel="home">
-              <?php print $site_name; ?>
-            </a>
-          </h1>
-        <?php endif; ?>
+        <h1 class="header-site-name-wrapper">
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header-site-name-link" rel="home">
+            <?php print $site_name; ?>
+          </a>
+        </h1>
         <?php if ($site_slogan): ?>
           <div class="header-site-slogan"><?php print $site_slogan; ?></div>
         <?php endif; ?>
