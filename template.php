@@ -56,3 +56,21 @@ function basis_breadcrumb($variables) {
   }
   return $output;
 }
+
+/**
+ * Implements hook_preprocess_page()'
+ * To add a class 'page-node-N' to each page.
+ */
+function basis_preprocess_page(&$variables) {
+  $node = menu_get_object();
+  if ($node) {
+    $variables['classes'][] = 'page-node-' . $node->nid;
+  }
+
+
+  // To add a class 'view-name-N' to each page.
+  $view = views_get_page_view();
+  if ($view) {
+    $variables['classes'][] = 'view-name-' . $view->name;
+  }
+}
