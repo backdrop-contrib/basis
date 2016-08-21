@@ -1,6 +1,32 @@
 <?php
 
 /**
+ * Implements hook_preprocess_page()'
+ * To add a class 'page-node-N' to each page.
+ */
+function basis_preprocess_page(&$variables) {
+  $node = menu_get_object();
+
+  // Add normalize.css from core as high up as possible in cascade
+  backdrop_add_css('core/misc/normalize.css', array(
+    'every_page' => true,
+    'group' => CSS_SYSTEM,
+    'weight' => -1000,
+  ));
+
+  if ($node) {
+    $variables['classes'][] = 'page-node-' . $node->nid;
+  }
+
+
+  // To add a class 'view-name-N' to each page.
+  $view = views_get_page_view();
+  if ($view) {
+    $variables['classes'][] = 'view-name-' . $view->name;
+  }
+}
+
+/**
  * Implements template_preprocess_page().
  */
 function basis_preprocess_layout(&$variables) {
@@ -55,22 +81,4 @@ function basis_breadcrumb($variables) {
     $output .= '</nav>';
   }
   return $output;
-}
-
-/**
- * Implements hook_preprocess_page()'
- * To add a class 'page-node-N' to each page.
- */
-function basis_preprocess_page(&$variables) {
-  $node = menu_get_object();
-  if ($node) {
-    $variables['classes'][] = 'page-node-' . $node->nid;
-  }
-
-
-  // To add a class 'view-name-N' to each page.
-  $view = views_get_page_view();
-  if ($view) {
-    $variables['classes'][] = 'view-name-' . $view->name;
-  }
 }

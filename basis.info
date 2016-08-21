@@ -16,7 +16,7 @@ stylesheets[all][] = css/component/admin-tabs.css
 stylesheets[all][] = css/skin.css
 ; @todo stylesheets[print][] = css/print.css
 
-; Temporarily overriding this - thinking of updating core contextual
+; @todo Temporarily overriding this - thinking of updating core contextual
 stylesheets[all][] = css/component/contextual.css
 
 ; Remove unwanted upstream CSS
@@ -26,8 +26,3 @@ stylesheets[all][] = two-column.css
 stylesheets[all][] = two-column-flipped.css
 
 scripts[] = js/script.js
-
-; We need at least one setting for the theme settings page to appear in the
-; menu. Color module provides our defaults, so we just register a dummy setting.
-settings[color] = true
-settings[main_menu_tabs] = no-tabs
