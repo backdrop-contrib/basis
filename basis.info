@@ -13,6 +13,7 @@ stylesheets[all][] = css/component/cards.css
 stylesheets[all][] = css/component/quote.css
 stylesheets[all][] = css/component/get-started.css
 stylesheets[all][] = css/component/admin-tabs.css
+stylesheets[all][] = css/component/pager.css
 stylesheets[all][] = css/skin.css
 ; @todo stylesheets[print][] = css/print.css
 

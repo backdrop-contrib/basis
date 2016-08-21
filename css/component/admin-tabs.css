@@ -19,7 +19,7 @@ nav.tabs {
     z-index: 0;
     display: block;
     width: 100%;
-    height: 3.3125em;
+    height: 3.1875em;
     transform: translate(-50%, 0);
     background-color: #586172;
   }
@@ -74,9 +74,9 @@ ul.primary li.active a,
   display: block;
   padding: 12px 20px;
   text-decoration: none;
-  border: 2px solid #bcc2cc;
-  border-left: 0;
-  border-bottom: 0;
+  border: 0;
+  border-right: 2px solid #586172;
+  border-right: 0.125rem solid #586172;
   overflow: visible;
   line-height: 1;
   color: #757575;
@@ -111,7 +111,6 @@ ul.primary li:first-child a {
   -webkit-border-radius: 4px 0 0 0;
   -moz-border-radius: 4px 0 0 0;
   border-radius: 4px 0 0 0;
-  border-left: 2px solid #bcc2cc;
 }
 
 .expand-dropdown-tabs-control,
@@ -119,6 +118,7 @@ ul.primary li:last-child a {
   -webkit-border-radius: 0 4px 0 0;
   -moz-border-radius: 0 4px 0 0;
   border-radius: 0 4px 0 0;
+  border-right: 0;
 }
 
 @media (max-width: 35em) {
@@ -143,7 +143,7 @@ ul.secondary {
   overflow: hidden;
   background-color: #fff;
   clear: both;
-  border: none;
+  border: 0;
 }
 
 ul.secondary li {
