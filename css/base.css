@@ -1,0 +1,9 @@
+/**
+ * @file
+ * Base element styles and normalize overrides
+ */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
