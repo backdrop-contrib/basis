@@ -170,7 +170,7 @@
   color: #000;
 }
 .vertical-tabs .vertical-tabs .vertical-tabs-list .summary {
-  line-height: normal;
+  line-height: 1.4;
   margin-bottom: 0;
 }
 /* Styles for legend at smaller screen sizes */

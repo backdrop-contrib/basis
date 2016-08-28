@@ -139,7 +139,7 @@ ul.secondary {
   font-weight: bold;
   padding: 16px 23px 6px;
   margin: 0 -20px 0;
-  line-height: 1.385em;
+  line-height: 1.385;
   overflow: hidden;
   background-color: #fff;
   clear: both;

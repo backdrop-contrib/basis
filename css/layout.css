@@ -9,6 +9,7 @@
 
 #check-font-wrapper {
   position: absolute; /* @todo make this update to core */
+  visibility: hidden;
 }
 
 .admin-bar {
