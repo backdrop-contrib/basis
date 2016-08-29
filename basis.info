@@ -19,8 +19,7 @@ stylesheets[all][] = css/component/status-messages.css
 stylesheets[all][] = css/component/tabledrag.css
 stylesheets[all][] = css/skin.css
 stylesheets[all][] = css/utility.css
-; @todo
-; stylesheets[print][] = css/print.css
+stylesheets[print][] = css/print.css
 
 ; Remove unwanted upstream CSS
 stylesheets[all][] = system.theme.css
