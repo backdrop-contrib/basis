@@ -1,6 +1,5 @@
 name = Basis
 description = The default front-end theme for Backdrop CMS, which can make a great base theme.
-version = 0.1beta
 type = theme
 backdrop = 1.x
 
