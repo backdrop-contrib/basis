@@ -28,7 +28,7 @@
         </a>
       </div>
     <?php endif; ?>
-    <?php if ($site_name || $slogan): ?>
+    <?php if ($site_name || $site_slogan): ?>
       <div class="header-name-and-slogan-wrapper">
         <div class="header-site-name-wrapper">
           <?php // Strong class only added for semantic value ?>
