@@ -66,6 +66,17 @@ function basis_preprocess_vertical_tabs(&$variables) {
 }
 
 /**
+ * Implements hook_links__MENU_NAME().
+ */
+function basis_preprocess_links(&$variables) {
+  if ($variables['theme_hook_original'] === 'links__header_menu') {
+    if (user_is_logged_in()) {
+      $variables['heading'] = t('Hi @name!', array('@name' => $GLOBALS['user']->name));
+    }
+  }
+}
+
+/**
  * Overrides theme_breadcrumb().
  * Removing raquo from markup
  */

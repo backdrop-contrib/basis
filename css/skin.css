@@ -95,21 +95,6 @@ th:last-child {
   color: #fff;
 }
 
-@media (min-width: 35em) {
-  .l-header .site-name {
-    text-align: left;
-  }
-}
-
-.l-header .site-name,
-.l-header .site-slogan {
-  text-align: center;
-}
-
-.l-header .block-system-main-menu {
-  text-align: center;
-}
-
 .l-header .block-system-user-menu {
   background: #586172;
 }

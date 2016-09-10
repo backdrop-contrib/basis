@@ -20,7 +20,7 @@
  */
 ?>
 <?php if ($site_name || $site_slogan || $logo): ?>
-  <div class="header-identity-wrapper">
+  <div class="header-identity-wrapper"><div class="header-identity">
     <?php if ($logo): ?>
       <div class="header-logo-wrapper">
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header-logo-link">
@@ -43,7 +43,7 @@
         <?php endif; ?>
       </div>
     <?php endif; ?>
-  </div>
+  </div></div>
 <?php endif; ?>
 
 <?php if ($menu): ?>

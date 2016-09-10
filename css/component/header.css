@@ -1,0 +1,156 @@
+/**
+ * Header block including logo, site name, and header menu.
+ *
+ * This also accommodates the positioning of the main menu block if it is
+ * positioning within the header region.
+ */
+
+/* Left/right positioning of elements in the header block. */
+@media (min-width: 34em) {
+  .block-system-header .block-content {
+    height: 7rem; /* Height required for vertical centering other elements. */
+  }
+  .header-identity-wrapper {
+    position: relative;
+    display: inline-block;
+    float: left;
+    height: 100%;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header-menu {
+    position: relative;
+    display: inline-block;
+    float: right;
+    height: 100%;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* Positioning for any menu block directly after the header block. */
+.block-system-header + .block-menu .block-content {
+  clear: both;
+}
+@media (min-width: 75em) {
+  .block-system-header + .block-menu .block-content {
+    height: 7rem;
+    margin-top: -7rem;
+    clear: none;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* Identity: Logo, Site Name, and Slogan. */
+.header-identity-wrapper {
+  padding-right: 2em; /* LTR */
+}
+[dir="rtl"] .header-identity-wrapper {
+  padding-right: 0;
+  padding-left: 2em;
+}
+.header-logo-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+}
+.header-name-and-slogan-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* @todo Add class for tall or wide logo */
+.header-logo-link {
+  display: inline-block;
+  min-width: 4em;
+  max-width: 6rem;
+  margin: 0 auto;
+  padding: 1rem 1rem 1rem 0; /* LTR */
+  font-size: 0; /* Eliminate trailing whitespace that may cause a new line. */
+}
+[dir="rtl"] .header-logo-link {
+  padding-left: 1rem;
+  padding-right: 0;
+}
+.header-site-name-wrapper {
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 62em) {
+  .header-site-name-wrapper {
+    font-size: 1.75em;
+  }
+}
+.header-site-slogan {
+  font-size: 0.9rem;
+}
+
+/* Menu that is part of the header block. */
+.header-menu {
+  padding: 1rem 0;
+}
+.header-menu h2 {
+  font-size: 1.2em;
+  margin: 0;
+}
+.header-menu .links {
+  font-size: 0.7rem;
+  text-align: right;
+}
+
+/* Other menus placed in the header region. */
+.l-header .menu,
+.l-header .leaf {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.l-header .leaf,
+.header-menu li {
+  font-size: 1em;
+  display: inline-block;
+}
+@media (min-width: 62em) {
+  .l-header .leaf,
+  .header-menu li {
+    font-size: 1.375em;
+  }
+}
+
+.l-header .leaf a,
+.header-menu a {
+  display: inline-block;
+  margin: 0.2em 0;
+  padding-left: 1.4em; /* LTR */
+}
+[dir="rtl"] .l-header .leaf a,
+[dir="rtl"] .header-menu a {
+  padding-left: 0;
+  padding-right: 1.4em;
+}
+.l-header .first a,
+.header-menu .first a {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.header-menu .links,
+.header-menu li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.header-menu .links li:before,
+.header-menu .links li:after {
+  display: none;
+}

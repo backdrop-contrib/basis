@@ -7,6 +7,7 @@ stylesheets[all][] = css/fonts.css
 stylesheets[all][] = css/base.css
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/component/breadcrumb.css
+stylesheets[all][] = css/component/header.css
 ; @todo Temporarily overriding contextual - thinking of updating core
 stylesheets[all][] = css/component/contextual.css
 stylesheets[all][] = css/component/drupal-form.css
