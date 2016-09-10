@@ -66,6 +66,18 @@ function basis_preprocess_vertical_tabs(&$variables) {
 }
 
 /**
+ * Implements template_preprocess_block().
+ */
+function basis_preprocess_block(&$variables) {
+  $theme_path = backdrop_get_path('theme', 'basis');
+
+  // Add component CSS if there's a hero on the page
+  if (get_class($variables['block']) == 'BlockHero') {
+    backdrop_add_css($theme_path . '/css/component/hero.css');
+  }
+}
+
+/**
  * Overrides theme_breadcrumb().
  * Removing raquo from markup
  */

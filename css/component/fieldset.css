@@ -98,7 +98,7 @@ fieldset .fieldset-wrapper {
   display: none;
 }
 
-@media (min-width: 30em) {
+@media (min-width: 34em) {
   .fieldset-legend span.summary {
     display: block;
   }

@@ -19,30 +19,43 @@
  * - $menu: The menu for the header (if any), as an HTML string.
  */
 ?>
+
+<?php
+/**
+ * Add class for tall or wide logo
+ * @todo  tried doing this code in template_preprocess_header, new index in variables
+ * didn't make it into this template :(
+ */
+$header_logo_classes = '';
+
+if (isset($logo)) {
+  $logo_size = getimagesize($logo);
+  if (!empty($logo_size)) {
+    if ($logo_size[0] < $logo_size[1]) {
+      $header_logo_classes = ' header-logo-tall';
+    }
+  }
+}
+
+?>
 <?php if ($site_name || $site_slogan || $logo): ?>
   <div class="header-identity-wrapper">
-    <?php if ($logo): ?>
-      <div class="header-logo-wrapper">
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header-logo-link">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header-logo" />
+      <div class="header-site-name-wrapper">
+        <?php // Strong class only added for semantic value ?>
+        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header-site-name-link" rel="home">
+          <?php if ($logo): ?>
+            <div class="header-logo-wrapper<?php print $header_logo_classes; ?>">
+              <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header-logo" />
+            </div>
+          <?php endif; ?>
+          <strong class="semantic">
+            <?php print $site_name; ?>
+          </strong>
         </a>
       </div>
-    <?php endif; ?>
-    <?php if ($site_name || $site_slogan): ?>
-      <div class="header-name-and-slogan-wrapper">
-        <div class="header-site-name-wrapper">
-          <?php // Strong class only added for semantic value ?>
-          <strong class="semantic">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header-site-name-link" rel="home">
-              <?php print $site_name; ?>
-            </a>
-          </strong>
-        </div>
-        <?php if ($site_slogan): ?>
-          <div class="header-site-slogan"><?php print $site_slogan; ?></div>
-        <?php endif; ?>
-      </div>
-    <?php endif; ?>
+      <?php if ($site_slogan): ?>
+        <div class="header-site-slogan"><?php print $site_slogan; ?></div>
+      <?php endif; ?>
   </div>
 <?php endif; ?>
 

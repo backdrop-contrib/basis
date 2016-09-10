@@ -25,7 +25,7 @@ ul.pager {
   display: none;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 34em) {
   .pager-item,
   .pager-ellipsis {
     display: block;

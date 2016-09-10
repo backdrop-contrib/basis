@@ -95,7 +95,7 @@ th:last-child {
   color: #fff;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 34em) {
   .l-header .site-name {
     text-align: left;
   }
@@ -114,7 +114,7 @@ th:last-child {
   background: #586172;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 34em) {
   .l-header .block-system-user-menu .leaf {
     font-size: 0.875em;
   }
@@ -290,12 +290,13 @@ div.warning:before {
 }
 
 div.error:before {
+  /* @todo fix these urls */
   background-image: url(/core/misc/message-24-error.png);
   background-color: #EE3D23;
 }
 
 /* Desktop size icons */
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 34em) {
   div.status:before {
     background-image: url(/core/misc/message-32-ok.png);
   }
@@ -629,6 +630,7 @@ fieldset .fieldset-legend {
     left: 100%;
   }
 }
+
 /**
  * Dropbutton overrides
  */
@@ -723,6 +725,49 @@ fieldset .fieldset-legend {
 }
 
 /**
+ * Custom Hero Component
+ */
+.hero-block {
+  background-color: #0074bd;
+  background-image: url(../images/texture.png) no-repeat center center;
+  background-repeat: no-repeat
+  background-position: center center;
+  background-blend-mode: luminosity;
+}
+
+@media (min-width: 25em) {
+  .hero-block {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 34em) {
+  .hero-block {
+    font-size: 1.5em;
+  }
+}
+
+.hero-block .block-title {
+  margin: 0 0 0.2em;
+  padding: 0;
+  font-weight: 200;
+  line-height: 1.2;
+  font-size: 2.3em;
+}
+@media (min-width: 34em) {
+  .hero-block .block-title {
+    font-size: 2.667em;
+  }
+}
+
+/* @todo remove for core */
+.button.hero-call-to-action {
+  background: #0074bd;
+  color: #fff;
+}
+
+
+/**
  * Utility classes
  */
 .disable-text-select {
@@ -732,3 +777,4 @@ fieldset .fieldset-legend {
   -ms-user-select: none;
   user-select: none;
 }
+
