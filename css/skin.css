@@ -362,6 +362,7 @@ div.error:before {
 }
 
 .node-readmore a,
+.comment-add a,
 input.form-submit,
 button.form-submit,
 .button {
@@ -370,6 +371,11 @@ button.form-submit,
   color: #444b53;
   background: #e5e5e6;
   letter-spacing: 0.025em;
+  line-height: 2.875;
+}
+
+ul.links li {
+  float: left;
   line-height: 2.875;
 }
 
