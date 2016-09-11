@@ -28,7 +28,7 @@
  */
 $header_logo_classes = '';
 
-if (isset($logo)) {
+if (!empty($logo)) {
   $logo_size = getimagesize($logo);
   if (!empty($logo_size)) {
     if ($logo_size[0] < $logo_size[1]) {

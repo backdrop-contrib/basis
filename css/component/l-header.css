@@ -9,7 +9,6 @@
 }
 
 .header-identity-wrapper {
-  display: inline-block;
   /* BG color for slogan */
   background: #000;
 }
@@ -19,6 +18,14 @@
   content: '';
   display: table;
   clear: both;
+}
+
+@media (min-width: 34em) {
+  .header-identity-wrapper {
+    /* Helps center .header-identity-wrapper */
+    display: inline-block;
+  }
+
 }
 
 @media (min-width: 48em) {
@@ -54,6 +61,7 @@
   background: #0074bd;
   padding: 1.25rem 1.25rem 1rem;
   line-height: 1.25rem;
+  text-align: center;
 }
 
 @media (min-width: 48em) {
@@ -66,12 +74,12 @@
   font-size: 1.25rem;
   margin: 0;
   padding: 0;
-  float: left;
 }
 
 @media (min-width: 34em) {
   .header-site-name-wrapper {
     width: auto;
+    float: left;
     font-size: 1.5em;
   }
 }
@@ -83,7 +91,7 @@
 }
 
 .header-site-name-link {
-  display: inline-block;
+  display: block;
   margin: 0;
 }
 
@@ -94,12 +102,19 @@
 }
 
 .header-site-slogan {
-  height: 3.5rem;
   margin: 0;
   line-height: 1.25rem;
-  padding: 1.5625rem 1rem 0.9375rem;
-  float: left;
+  padding: 0.5rem 1rem;
   font-size: 0.75rem;
+  text-align: center;
+}
+
+@media (min-width: 34em) {
+  .header-site-slogan {
+    height: 3.5rem;
+    padding: 1.5625rem 1rem 0.9375rem;
+    float: left;
+  }
 }
 
 @media (min-width: 48em) {
