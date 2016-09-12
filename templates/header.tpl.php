@@ -36,8 +36,8 @@ if (!empty($logo)) {
     }
   }
 }
-
 ?>
+
 <?php if ($site_name || $site_slogan || $logo): ?>
   <div class="header-identity-wrapper">
       <div class="header-site-name-wrapper">

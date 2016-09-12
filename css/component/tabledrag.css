@@ -1,6 +1,6 @@
 /**
  * @file
- * Tabledrag styles
+ * Tabledrag styling.
  */
 
 table.stick-header {
@@ -126,9 +126,9 @@ tr.draggable .handle .handle-inner:after {
 abbr.tabledrag-changed {
   position: absolute;
   top: 0;
-  left: -0.25em;
+  left: -0.375em;
   display: block;
-  width: 0.25em;
+  width: 0.375em;
   height: 100%;
   text-indent: -9999em;
   z-index: 0;

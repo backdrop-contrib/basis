@@ -1,14 +1,27 @@
 /**
  * @file
- * Colors and appearance
- * Component styles in this file are color overrides for easy updating
+ * Colors and appearance styles.
+ *
+ * Component styles in this file are simple overrides for easy updating.
  */
 body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   background: #fff;
 }
 
 a {
   color: #0074bd;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  background: #ddd;
 }
 
 blockquote,
@@ -38,18 +51,6 @@ code p {
 }
 
 /**
- * Small Text Components
- */
-.marker {
-  background: #abdeff;
-}
-
-.more-help-link a:before {
-  color: #fff;
-  background: #0074bd;
-}
-
-/**
  * Table tags
  */
 td {
@@ -65,12 +66,88 @@ th:last-child {
   border-right-color: #dee2ea;
 }
 
-/* @todo override sort arrow on table */
+/* Sort arrow color */
+table [aria-sort="descending"] a:after {
+  border-top-color: #333;
+}
+
+table [aria-sort="ascending"] a:after {
+  border-bottom-color: #333;
+}
+
 /**
- * Header
+ * Fieldsets.
+ */
+fieldset {
+  background-color: #fff;
+  border-color: #EAEAEA;
+}
+
+legend {
+  font-size: 1.1875em;
+  font-weight: normal;
+}
+
+fieldset .fieldset-legend {
+  text-transform: uppercase;
+}
+
+/**
+ * Small Text Components
+ */
+.marker {
+  background: #abdeff;
+}
+
+.more-help-link a:before {
+  color: #fff;
+  background: #0074bd;
+}
+
+/**
+ * Icon - External Link
+ * Add following markup:
+ * <span class="icon-external-link"><span class="icon-external-link-arrow"></span></span>
+ */
+.icon-external-link {
+  border-color: #0074bd;
+}
+
+.icon-external-link-arrow {
+  background: #0074bd;
+  /* Should be bg color */
+  border-color:  #fff;
+}
+
+.icon-external-link-arrow:before {
+  border-color: #0074bd;
+}
+
+.icon-external-link-arrow:after {
+  border-bottom-color: #0074bd;
+}
+
+/**
+ * Link list arrow color
+ */
+.links li:before,
+.links li:after {
+  border-color: #0074bd;
+}
+
+/**
+ * Header Region
+ * More layout styles included since they will effected by logo and
+ * site name word size
  */
 .l-header {
   background: #20252e;
+}
+
+@media (min-width: 34em) {
+  .l-header-inner {
+    min-height: 6.125rem;
+  }
 }
 
 .l-header-inner {
@@ -86,38 +163,154 @@ th:last-child {
   color: #edf8ff;
 }
 
+.block-system-header {
+  /* Helps center .header-identity-wrapper on smaller screens */
+  text-align: center;
+}
+
+.header-identity-wrapper {
+  /* BG color for slogan, and logo/site name if they don't have a bg */
+  background: #000;
+}
+
+@media (min-width: 34em) {
+  .header-identity-wrapper {
+    /* Helps center .header-identity-wrapper on smaller screens */
+    display: inline-block;
+  }
+}
+
+@media (min-width: 48em) {
+  .header-identity-wrapper {
+    text-align: left;
+  }
+}
+
+.header-site-name-wrapper {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 34em) {
+  .header-site-name-wrapper {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 62em) {
+  .header-site-name-wrapper {
+    font-size: 1.75em;
+  }
+}
+
+.header-logo-wrapper {
+  max-width: 6rem;
+  height: 3.5rem;
+  /* Keeps logo in same container as text but avoids padding */
+  margin: -1.25rem 1rem -1rem -1.25rem;
+}
+
+@media (min-width: 48em) {
+  .header-logo-wrapper {
+    height: 4.25rem;
+    /* Keeps logo in same container as text but avoids padding */
+    margin: -1.75rem 1.25rem -1.25rem -1.25rem;
+  }
+}
+
 .l-header .site-name {
   font-weight: 200;
   text-align: center;
 }
 
-.l-header .site-slogan {
-  color: #fff;
+.header-site-name-link {
+  background: #0074bd;
+  padding: 1.25rem 1.25rem 1rem;
+  line-height: 1.25rem;
+  text-align: center;
 }
 
 @media (min-width: 34em) {
-  .l-header .site-name {
-    text-align: left;
+  .header-site-name-link {
+    display: inline-block;
   }
 }
 
-.l-header .site-name,
-.l-header .site-slogan {
+@media (min-width: 48em) {
+  .header-site-name-link {
+    padding: 1.75rem 1.25rem 1.25rem; /* Attempts to line up baselines */
+  }
+}
+
+.header-site-slogan {
+  line-height: 1.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
   text-align: center;
+}
+
+@media (min-width: 34em) {
+  .header-site-slogan {
+    height: 3.5rem;
+    padding: 1.5625rem 1rem 0.9375rem; /* Attempts to line up baselines */
+    float: left;
+  }
+}
+
+@media (min-width: 48em) {
+  .header-site-slogan {
+    height: 4.25rem;
+    padding: 2.0625rem 1.25rem 0.9375rem; /* Attempts to line up baselines */
+    font-size: 1rem;
+  }
 }
 
 .l-header .block-system-main-menu {
   text-align: center;
 }
 
-.l-header .block-system-user-menu {
-  background: #586172;
+/**
+ * Menus in header area
+ * More layout styles included since they'll be effected by menu item count
+ * and word size
+ */
+.header-menu {
+  /* Center menu at mobile */
+  text-align: center;
+}
+
+.header-menu > .links {
+  /* Center menu at mobile */
+  display: inline-block;
+}
+
+.l-header .menu,
+.l-header .leaf {
+  text-align: left;
+}
+
+.l-header .leaf,
+.header-menu li {
+  font-size: 1em;
 }
 
 @media (min-width: 34em) {
-  .l-header .block-system-user-menu .leaf {
-    font-size: 0.875em;
+  .l-header .leaf,
+  .header-menu li {
+    font-size: 1.125em;
   }
+}
+
+@media (min-width: 62em) {
+  .l-header .leaf,
+  .header-menu li {
+    font-size: 1.375em;
+  }
+}
+
+.l-header .leaf a,
+.header-menu a {
+  display: block;
+  padding: 0.75em 1em;
 }
 
 /**
@@ -125,6 +318,7 @@ th:last-child {
  */
 .l-footer {
   border-top: 0.25rem solid #c6cad2;
+  /* If footer text wraps, remove line-height & add padding styles to blocks */
   line-height: 3;
   padding: 0.5em 0 1em;
   margin: 5em 0 0;
@@ -137,63 +331,8 @@ th:last-child {
   text-decoration: none;
 }
 
-/* @todo Commmenting out for now, new grid styles break this */
-/*
-.drop-lounging {
-  position: relative;
-  width: 10.3125em;
-}
-
-.drop-lounging:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  left: calc(50% + 1.25em);
-  display: block;
-  box-sizing: content-box;
-  width: 100%;
-  height: 0;
-  margin: 0;
-  padding: 0 0 52%;
-  -webkit-transform: translate(-50%, -82%);
-  transform: translate(-50%, -82%);
-  background: url("../images/drop-lounging.png") no-repeat;
-  background-size: 100% auto;
-}
-*/
-
-/**
- * Fancy checkbox
- */
-.fancy-checkbox-label:before {
-  border-color: #0074bd;
-}
-
-:checked + .fancy-checkbox-label:after {
-  border-color: #000;
-}
-
-/**
- * Icon - External Link
- * Add following markup:
- * <span class="icon-external-link"><span class="icon-external-link-arrow"></span></span>
- */
-.icon-external-link {
-  border-color: #0074bd;
-}
-
-.icon-external-link-arrow {
-  background: #0074bd;
-  border-color: #fff;
-}
-
-.icon-external-link-arrow:before {
-  border-color: #0074bd;
-}
-
-.icon-external-link-arrow:after {
-  border-bottom-color: #0074bd;
+.l-footer .block-system-powered-by a:hover {
+  text-decoration: underline;
 }
 
 /**
@@ -213,14 +352,6 @@ th:last-child {
 }
 
 /**
- * List Components
- */
-.links li:before,
-.links li:after {
-  border-color: #0074bd;
-}
-
-/**
  * Tabledrag
  */
 .draggable a.tabledrag-handle {
@@ -232,26 +363,25 @@ th:last-child {
   opacity: 0.3;
 }
 
-/* Resize icon color */
 tr.draggable .handle,
 tr.draggable .handle .handle-inner {
-  background: #333;
+  background: #333; /* Resize icon color */
 }
 
 tr.draggable .handle:before {
-  border-bottom-color: #333;
+  border-bottom-color: #333; /* Resize icon color */
 }
 
 tr.draggable .handle:after {
-  border-top-color: #333;
+  border-top-color: #333; /* Resize icon color */
 }
 
 tr.draggable .handle .handle-inner:before {
-  border-left-color: #333;
+  border-left-color: #333; /* Resize icon color */
 }
 
 tr.draggable .handle .handle-inner:after {
-  border-right-color: #333;
+  border-right-color: #333; /* Resize icon color */
 }
 
 abbr.tabledrag-changed {
@@ -268,7 +398,7 @@ abbr.tabledrag-changed {
 }
 
 div.status:before {
-  background-image: url(/core/misc/message-24-ok.png);
+  background-image: url(../../../misc/message-24-ok.png);
   background-color: #CFDE56;
 }
 
@@ -279,7 +409,7 @@ div.status:before {
 }
 
 div.warning:before {
-  background-image: url(/core/misc/message-24-warning.png);
+  background-image: url(../../../misc/message-24-warning.png);
   background-color: #FCE400;
 }
 
@@ -290,44 +420,43 @@ div.warning:before {
 }
 
 div.error:before {
-  /* @todo fix these urls */
-  background-image: url(/core/misc/message-24-error.png);
+  background-image: url(../../../misc/message-24-error.png);
   background-color: #EE3D23;
 }
 
 /* Desktop size icons */
 @media only screen and (min-width: 34em) {
   div.status:before {
-    background-image: url(/core/misc/message-32-ok.png);
+    background-image: url(../../../misc/message-32-ok.png);
   }
 
   div.warning:before {
-    background-image: url(/core/misc/message-32-warning.png);
+    background-image: url(../../../misc/message-32-warning.png);
   }
 
   div.error:before {
-    background-image: url(/core/misc/message-32-error.png);
+    background-image: url(../../../misc/message-32-error.png);
   }
 }
 
 /* SVG overrides */
 div.status:before {
-  background-image: -webkit-linear-gradient(transparent, transparent), url(/core/misc/message-ok.svg);
-  background-image: linear-gradient(transparent, transparent), url(/core/misc/message-ok.svg);
+  background-image: -webkit-linear-gradient(transparent, transparent), url(../../../misc/message-ok.svg);
+  background-image: linear-gradient(transparent, transparent), url(../../../misc/message-ok.svg);
 }
 
 div.warning:before {
-  background-image: -webkit-linear-gradient(transparent, transparent), url(/core/misc/message-warning.svg);
-  background-image: linear-gradient(transparent, transparent), url(/core/misc/message-warning.svg);
+  background-image: -webkit-linear-gradient(transparent, transparent), url(../../../misc/message-warning.svg);
+  background-image: linear-gradient(transparent, transparent), url(../../../misc/message-warning.svg);
 }
 
 div.error:before {
-  background-image: -webkit-linear-gradient(transparent, transparent), url(/core/misc/message-error.svg);
-  background-image: linear-gradient(transparent, transparent), url(/core/misc/message-error.svg);
+  background-image: -webkit-linear-gradient(transparent, transparent), url(../../../misc/message-error.svg);
+  background-image: linear-gradient(transparent, transparent), url(../../../misc/message-error.svg);
 }
 
 /**
- * Drupal Form Styles
+ * Backdrop Form Styles
  */
 .form-item-radio label,
 .form-radios label,
@@ -362,45 +491,56 @@ div.error:before {
   font-family: Consolas, 'Lucida Console', 'Courier New', monospace;
 }
 
-.node-readmore a,
+select.form-select {
+  font-weight: 400;
+  border-color: #d0d0d0;
+  color: #444b53;
+  background: #fff;
+}
+
+select.form-select:focus {
+  color: #000;
+  border-color: #43afe4;
+}
+
 input.form-submit,
 button.form-submit,
 .button {
   text-align: center;
   text-transform: uppercase;
-  color: #444b53;
-  background: #e5e5e6;
+  color: #333;
   letter-spacing: 0.025em;
   line-height: 2.875;
+  background: #e5e5e6;
 }
 
 .button:hover,
-input.form-submit:hover,
 .button:focus,
+input.form-submit:hover,
 input.form-submit:focus {
-  background-color: #abdeff;
-  border-color: #abdeff;
+  color: #333;
+  background: #e5e5e6;
 }
 
-.button,
+.button:active,
 input.form-submit:active {
-  /* @todo, decide on an active state */
-  background-color: #CFDE56;
-  border-color: #CFDE56;
-  box-shadow: 0 0 0.3125em #dcdcdc;
+  color: #333;
+  background: #e5e5e6;
 }
 
 input.form-button-disabled,
 input.form-button-disabled:active {
   background: #eee;
   border-color: #eee;
+  text-shadow: none;
   color: #999;
 }
 
+.button,
+input.form-submit,
 input.button-primary,
 button.button-primary {
   color: white;
-  border-color: #0074bd;
   background-color: #0074bd;
 }
 
@@ -408,8 +548,15 @@ input.button-primary:hover,
 input.button-primary:focus,
 button.button-primary:hover,
 button.button-primary:focus {
-  border-color: #114a75;
+  color: white;
   background-color: #114a75;
+}
+
+input.button-primary:active,
+button.button-primary:active {
+  box-shadow: inset 0 0 0 0.125em #114a75;
+  background-color: #0074bd;
+  color: white;
 }
 
 input.button-secondary,
@@ -427,10 +574,19 @@ button.button-secondary:focus {
   background-color: #97979e;
 }
 
+input.button-secondary:active,
+button.button-secondary:active {
+  color: white;
+  background-color: #97979e;
+  box-shadow: inset 0 0 0 0.125em #555;
+}
+
+
 input.button-danger,
 button.button-danger {
   color: #e7251b;
   box-shadow: inset 0 0 0 0.125rem #e7251b;
+  background: transparent;
 }
 
 input.button-danger:hover,
@@ -457,18 +613,6 @@ textarea.form-textarea {
   background: #fff;
 }
 
-select.form-select {
-  font-weight: 400;
-  border-color: #d0d0d0;
-  color: #444b53;
-  background: #fff;
-}
-
-select.form-select:focus {
-  color: #000;
-  border-color: #43afe4;
-}
-
 input.form-text:focus,
 input.form-tel:focus,
 input.form-email:focus,
@@ -490,44 +634,19 @@ ul.action-links a {
 [dir="rtl"] ul.action-links a {
   background-position: right center;
 }
-/**
- * Fieldsets.
- *
- * Fieldset legends are displayed like containers in Seven. However, several
- * browsers do not support styling of LEGEND elements. To achieve the desired
- * styling:
- * - All fieldsets use 'position: relative'.
- * - All legend labels are wrapped in a single span.fieldset-legend that uses
- *   'position: absolute', which means that the LEGEND element itself is not
- *   rendered by browsers.
- * - Due to using 'position: absolute', collapsed fieldsets do not have a
- *   height; the fieldset requires a 'padding-top' to make the absolute
- *   positioned .fieldset-legend appear as though it would have a height.
- * - Various browsers are positioning the legend differently if there is a
- *   'padding-left'/'padding-right' applied on a fieldset and inherit the
- *   positioning even to absolute positioned elements within; we therefore have
- *   to apply all padding to the inner .fieldset-wrapper instead.
- */
-fieldset {
-  background-color: #fff;
-  border-color: #EAEAEA;
-}
-
-legend {
-  font-size: 1.1875em;
-  font-weight: normal;
-}
-
-fieldset .fieldset-legend {
-  text-transform: uppercase;
-}
 
 /**
  * Collapsible Fieldsets
  */
 .js fieldset.collapsible .fieldset-legend a:before {
-  content: "";
   border-top-color: #000;
+}
+
+/**
+ * Teaser
+ */
+.view-mode-teaser + .view-mode-teaser {
+  border-top-color: #c6cad2;
 }
 
 /**
@@ -577,151 +696,39 @@ fieldset .fieldset-legend {
 }
 
 .progress .bar {
-  margin: 0 0.2em .5em 0;
-  border: 2px solid #e5e5e6;
-  border-radius: 3px;
-  overflow: hidden;
+  border-color: #e5e5e6;
   background: #e5e5e6;
 }
 
 .progress .filled {
-  position: relative;
-  overflow: hidden;
   background: #586172;
-  -webkit-transition: width .4s;
-  transition: width .4s;
-  will-change: width;
 }
 
 /* Progress Bar Animation */
 .progress .filled:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 15%;
-  height: 100%;
-  -webkit-transform: skewX(-20deg);
-  transform: skewX(-20deg);
-  background-color: #3c4350;
-  -webkit-animation: progressGradient 3s infinite;
-  animation: progressGradient 1.5s infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-transition: width .4s;
-  transition: width .4s;
-  will-change: left, width;
-}
-
-@-webkit-keyframes progressGradient {
-  0% {
-    left: -15%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-@keyframes progressGradient {
-  0% {
-    left: -15%;
-  }
-  100% {
-    left: 100%;
-  }
+  border-color: #3c4350;
 }
 
 /**
- * Dropbutton overrides
+ * Dialog overrides
  */
-/* @todo COMPLETELY GUT core/misc/ui/jquery.ui.dialog.css */
-.dropbutton li {
-  margin: 0;
-}
-
-.ui-widget {
-  font-size: inherit;
-  font-family: inherit;
-}
-
 .ui-dialog {
-  border: 0.125em solid #20252e;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.ui-corner-all {
-  border-radius: 0;
+  border-color: #20252e;
 }
 
 .ui-dialog .ui-dialog-titlebar {
   background: #20252e;
   color: #fff;
-  cursor: default;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .ui-dialog .ui-dialog-titlebar-close {
-  top: 0;
-  top: calc(-0.125em);
-  right: 0;
-  right: calc(-0.125em);
-  width: 2.5em;
-  height: 100%;
-  height: calc(100% + 0.125em);
-  margin: 0;
-  outline: none;
   background: #008be2;
 }
 
-.ui-dialog .ui-dialog-titlebar-close .ui-icon {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 1em;
-  height: 1em;
-  margin: 0;
-  background: transparent;
-}
-
+/* Close X color */
 .ui-dialog .ui-dialog-titlebar-close .ui-icon:before,
 .ui-dialog .ui-dialog-titlebar-close .ui-icon:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 0.125em;
-  height: 0.875em;
   background: #fff;
-}
-
-.ui-dialog .ui-dialog-titlebar-close .ui-icon:before {
-  -webkit-transform:
-    translate(0.5em, 0.125em)
-    rotate(45deg);
-  transform:
-    translate(0.5em, 0.125em)
-    rotate(45deg);
-}
-
-.ui-dialog .ui-dialog-titlebar-close .ui-icon:after {
-  -webkit-transform:
-    translate(0.5em, 0.125em)
-    rotate(-45deg);
-  transform:
-    translate(0.5em, 0.125em)
-    rotate(-45deg);
-}
-
-.ui-button-icon-only .ui-button-text,
-.ui-button-icons-only .ui-button-text {
-  padding: 0;
 }
 
 /**
@@ -760,21 +767,162 @@ fieldset .fieldset-legend {
   }
 }
 
-/* @todo remove for core */
-.button.hero-call-to-action {
-  background: #0074bd;
-  color: #fff;
+/**
+ * Primary admin tabs
+ */
+nav.tabs:before {
+  /* Background behind primary tabs */
+  background-color: #586172;
 }
 
+ul.primary {
+  font-size: 0.9375em;
+  text-transform: uppercase;
+}
+
+ul.primary li a,
+ul.primary li a:visited,
+ul.primary li a:hover,
+ul.primary li.active a,
+.expand-dropdown-tabs-control,
+.responsive-tabs-mobile .expand-dropdown-tabs-control:before,
+.responsive-tabs-mobile .expand-dropdown-tabs-label {
+  border-color: #586172; /* Should be color of bg behind tabs */
+  color: #757575;
+  background-color: #dee2ea;
+}
+
+ul.primary li.active a,
+ul.primary li.active a.active,
+ul.primary li.active a:active,
+ul.primary li.active a:visited,
+.responsive-tabs-mobile .expand-dropdown-tabs-label {
+  color: #000;
+  background-color: #fff;
+  font-weight: bold;
+}
+
+ul.primary li a:hover,
+ul.primary li a:focus,
+.expand-dropdown-tabs-control:hover,
+.expand-dropdown-tabs-control:focus,
+.responsive-tabs-mobile .expand-dropdown-tabs-control:hover:before,
+.responsive-tabs-mobile .expand-dropdown-tabs-control:focus:before,
+.responsive-tabs-mobile .expand-dropdown-tabs-control.js-active:before,
+.expand-dropdown-tabs-control.js-active {
+  color: #000;
+  background: #bcc2cc;
+}
+
+ul.primary li a:active,
+.expand-dropdown-tabs-control:active,
+.responsive-tabs-mobile .expand-dropdown-tabs-control:active:before {
+  background: #dee2ea;
+  box-shadow: inset 0 0 0 0.125em #bcc2cc;
+}
 
 /**
- * Utility classes
+ * Secondary admin tabs
  */
-.disable-text-select {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+ul.secondary {
+  font-size: 0.8125em;
+  font-weight: bold;
+  background-color: #fff;
 }
 
+ul.secondary li a {
+  border-color: #e3e2e2;
+  color: #444B53;
+}
+
+ul.secondary li a:hover,
+ul.secondary li a:focus,
+ul.secondary li.active a,
+ul.secondary li.active a.active {
+  color: #000;
+  background: #e3e2e2;
+}
+
+ul.secondary li a:active {
+  color: #000;
+  background: #e3e2e2;
+  box-shadow: inset 0 0 0 0.125em #fff;
+}
+
+/**
+ * Responsive tabs
+ */
+.responsive-tabs-mobile ul.primary {
+  background: #fff;
+}
+
+.expand-dropdown-tabs ul.responsive-tabs-dropdown li a,
+.expand-dropdown-tabs ul.responsive-tabs-dropdown li a:hover {
+  border-top-color: #fff;
+}
+
+.expand-dropdown-tabs-control:before {
+  content: '...';
+  font-weight: bold;
+}
+
+.responsive-tabs-after .expand-dropdown-tabs-control {
+  border-left-color: 2px solid #bcc2cc;
+}
+
+.expand-dropdown-tabs-label {
+  text-transform: uppercase;
+}
+
+.expand-dropdown-tabs-control:hover .expand-dropdown-tabs-label,
+.responsive-tabs-mobile.js-active .expand-dropdown-tabs-label {
+  background: #e8e8e8;
+}
+
+.responsive-tabs-mobile.expand-dropdown-tabs .expand-dropdown-tabs-label,
+.responsive-tabs-mobile.expand-dropdown-tabs:hover .expand-dropdown-tabs-label {
+  background: #fff;
+}
+
+.responsive-tabs-mobile .expand-dropdown-tabs-control.js-active {
+  background: #fff;
+}
+
+.responsive-tabs-mobile .expand-dropdown-tabs-control:before {
+  background: #dee2ea;
+}
+
+.responsive-tabs-mobile.expand-dropdown-tabs .expand-dropdown-tabs-control:before {
+  background: #fff;
+}
+
+.responsive-tabs-mobile .expand-dropdown-tabs-control:after {
+  border-right-color: #000;
+}
+
+.expand-dropdown-tabs .expand-dropdown-tabs-control:after {
+  border-top-color: #bcc2cc;
+}
+
+.responsive-tabs-mobile ul.primary,
+.responsive-tabs-mobile.expand-dropdown-tabs ul.primary {
+  background: #fff;
+}
+
+.responsive-tabs-mobile ul.primary,
+.expand-dropdown-tabs.responsive-tabs-mobile ul.primary {
+  -webkit-border-radius: 0 0 4px 4px;
+  border-radius: 4px;
+}
+
+.responsive-tabs-mobile ul.primary li {
+  border-bottom-color: #fff;
+}
+
+.responsive-tabs-mobile ul.primary a:after {
+  background: #bcc2cc;
+}
+
+.responsive-tabs-mobile-header-padder {
+  background: #586172;
+}

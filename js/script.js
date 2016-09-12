@@ -13,6 +13,7 @@ Backdrop.behaviors.toggles = {
   }
 }
 
+// Detect if flexbox is available to give helper class for CSS
 Backdrop.featureDetect.flexbox();
 
 if (typeof Backdrop.tableDrag !== 'undefined') {

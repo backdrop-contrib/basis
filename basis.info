@@ -3,20 +3,20 @@ description = The default front-end theme for Backdrop CMS, which can make a gre
 type = theme
 backdrop = 1.x
 
-stylesheets[all][] = css/fonts.css
 stylesheets[all][] = css/base.css
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/component/l-header.css
 stylesheets[all][] = css/component/breadcrumb.css
-; @todo Temporarily overriding contextual - thinking of updating core
-stylesheets[all][] = css/component/contextual.css
-stylesheets[all][] = css/component/drupal-form.css
-stylesheets[all][] = css/component/fancy-checkbox.css
+stylesheets[all][] = css/component/backdrop-form.css
 stylesheets[all][] = css/component/fieldset.css
 stylesheets[all][] = css/component/pager.css
 stylesheets[all][] = css/component/small-text-components.css
 stylesheets[all][] = css/component/status-messages.css
 stylesheets[all][] = css/component/tabledrag.css
+stylesheets[all][] = css/component/teasers.css
+stylesheets[all][] = css/component/progress.css
+stylesheets[all][] = css/component/dropbutton.css
+stylesheets[all][] = css/component/dialog.css
 stylesheets[all][] = css/skin.css
 stylesheets[all][] = css/utility.css
 stylesheets[print][] = css/print.css

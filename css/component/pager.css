@@ -1,6 +1,6 @@
 /**
  * @file
- * Pager styles
+ * Pager styling.
  */
 ul.pager {
   display: -webkit-box;
@@ -40,8 +40,6 @@ ul.pager {
 .pager-item {
   padding: 0.6em 1em;
   margin: 0;
-  background: #586172;
-  color: #fff;
 }
 
 .no-flexbox .pager-first,
@@ -55,7 +53,6 @@ ul.pager {
 }
 
 .pager-ellipsis {
-  color: #586172;
   padding-left: 0;
   padding-right: 0;
 }
@@ -67,22 +64,9 @@ ul.pager {
 .pager-item a {
   margin: -0.6em -1em;
   padding: 0.6em 1em;
-  color: #fff;
   text-decoration: none;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   will-change: background-color;
   white-space: nowrap;
-}
-
-.pager-first a:hover,
-.pager-previous a:hover,
-.pager-next a:hover,
-.pager-last a:hover,
-.pager-item a:hover {
-  background: #3c4350;
-}
-
-.pager-current {
-  background: #20252e;
 }

@@ -1,24 +1,31 @@
 /**
  * @file
- * Breadcrumb styling
+ * Breadcrumb styles.
  */
 .breadcrumb {
-  background: #586172;
   overflow: hidden;
   margin: 0 0 1em;
+}
+
+.breadcrumb ol,
+.breadcrumb li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumb li {
   position: relative;
   padding: 0 1em;
+  float: left;
 }
 
 .breadcrumb li a {
   position: relative;
   z-index: 1;
+  display: block;
   margin: 0 -1em;
   padding: 0.5em 1.4em;
-  color: #fff;
   text-decoration: none;
 }
 

@@ -1,17 +1,11 @@
 /**
  * @file
- * Base element styles and normalize overrides
+ * Base element styles and normalize overrides.
  */
 
 body {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  background: #fff;
-}
-
-a {
-  color: #0074bd;
 }
 
 li {
@@ -126,6 +120,10 @@ img {
   height: auto;
 }
 
+label {
+  font-weight: 600;
+}
+
 /**
  * Table tags
  */
@@ -164,6 +162,28 @@ th:last-child {
   border-right-color: #dee2ea;
 }
 
+table [aria-sort] a:after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 0.375em solid transparent;
+}
+
+table [aria-sort="descending"] a:after {
+  border-top-color: #333;
+  border-bottom-width: 0;
+}
+
+table [aria-sort="ascending"] a:after {
+  border-bottom-color: #333;
+  border-top-width: 0;
+}
+
+table [aria-sort] img {
+  visibility: hidden;
+}
+
 /**
  * Fieldset styles
  */
@@ -172,16 +192,10 @@ fieldset {
   max-width: 100%;
   margin: 1em 0;
   padding: 3.774em 0 0 0; /* LTR */
-  background-color: #fff;
   border: 0.125em solid #EAEAEA;
   min-width: 0;
 }
 
 [dir="rtl"] fieldset {
   padding: 2.5em 0 0;
-}
-
-legend {
-  font-size: 1.1875em;
-  font-weight: normal;
 }

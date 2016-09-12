@@ -14,6 +14,9 @@ function basis_preprocess_page(&$variables) {
     'weight' => -1000,
   ));
 
+  // Add the OpenSans font from core on every page of the site.
+  backdrop_add_library('system', 'opensans', TRUE);
+
   if ($node) {
     $variables['classes'][] = 'page-node-' . $node->nid;
   }
@@ -40,10 +43,6 @@ function basis_preprocess_layout(&$variables) {
  */
 function basis_preprocess_menu_local_tasks(&$variables) {
   $theme_path = backdrop_get_path('theme', 'basis');
-  $seven_theme_path = backdrop_get_path('theme', 'seven');
-
-  // @todo put responsive tabs in a more central place
-  backdrop_add_js($seven_theme_path . '/js/script.js');
   backdrop_add_css($theme_path . '/css/component/admin-tabs.css');
 }
 

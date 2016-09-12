@@ -7,11 +7,6 @@
   box-sizing: border-box;
 }
 
-#check-font-wrapper {
-  position: absolute; /* @todo make this update to core */
-  visibility: hidden;
-}
-
 .l-header {
   position: relative;
   margin: 0 0 2rem;
@@ -23,104 +18,4 @@
 
 .l-footer {
   margin: 1.5rem 0 0;
-}
-
-.l-footer .block-system-powered-by {
-  padding: 0 0 0 2rem;
-}
-
-/**
- * Breadcrumbs
- */
-.breadcrumb ol,
-.breadcrumb li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.breadcrumb li {
-  float: left;
-}
-
-.breadcrumb li a {
-  display: block;
-  padding: 0.5rem 0.8rem;
-}
-
-/**
- * Flex Gallery
- */
-.flex-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.flex-gallery-item {
-  flex-grow: 1;
-  margin: 0;
-  padding: 0;
-}
-
-.no-flexbox .flex-gallery-item {
-  display: block;
-  float: left;
-}
-
-.flex-gallery-item {
-  max-width: 100%;
-  padding: 0 1em 1em 0;
-}
-
-/**
- * Teasers
- */
-.view-mode-teaser {
-  margin: 2rem 0 0;
-  padding: 2rem 0 0;
-}
-
-.view-mode-teaser:first-of-type {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.view-mode-teaser + .view-mode-teaser {
-  border-top: 0.25rem solid #c6cad2;
-}
-
-.view-mode-teaser h1,
-.view-mode-teaser h2,
-.view-mode-teaser h3,
-.view-mode-teaser h4,
-.view-mode-teaser h5,
-.view-mode-teaser h6 {
-  margin: 0 0 0.5rem;
-}
-
-.view-mode-teaser .align-right {
-  margin: 0 0 1.5rem 1.5rem;
-}
-
-.view-mode-teaser p {
-  margin: 0 0 0.5rem;
-}
-
-.view-mode-teaser .content {
-  margin: 0 0 1.5rem;
-}
-
-.no-flexbox .l-header .block,
-.no-flexbox .l-header .block > div,
-/* @todo Want to disable header menu and remove from core */
-.no-flexbox .l-header .header-identity-wrapper,
-.no-flexbox .l-header .header-menu,
-.no-flexbox .l-header .links,
-.no-flexbox .l-header .links > li,
-.no-flexbox .header-name-and-slogan-wrapper {
-  display: block;
-  float: left;
 }

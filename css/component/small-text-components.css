@@ -1,17 +1,24 @@
 /**
- * Small Text Components
+ * @file
+ * Small text components styling.
+ */
+
+/**
+ * Marker
  */
 .marker {
   font-size: 0.875em;
   display: inline-block;
   margin: 0 0.4em;
   padding: 0.3em 0.6em;
-  background: #abdeff;
   text-transform: uppercase;
   line-height: 1;
   font-style: italic;
 }
 
+/**
+ * More help link
+ */
 .more-help-link {
   text-align: right;
 }
@@ -29,17 +36,7 @@
   margin: 0 0.4em 0 0;
   border-radius: 50%;
   font-weight: 600;
-  color: #fff;
   text-align: center;
-  background: #0074bd;
-}
-
-.links.inline .node-readmore {
-  display: block;
-}
-
-.links.inline .node-readmore:after {
-  content: '';
 }
 
 /**
@@ -73,7 +70,6 @@
   box-sizing: content-box;
   width: 0.2em;
   height: 0.6em;
-  background: #0074bd;
   border: 0.125em solid #fff;
   border-top: 0;
   border-bottom: 0;
@@ -108,7 +104,6 @@
 .icon-external-link-arrow:after {
   border: 0.1875em solid transparent;
   border-top: 0;
-  border-bottom-color: #0074bd;
   -webkit-transform: translate(-0.12em, -0.12em);
   transform: translate(-0.12em, -0.12em);
 }
@@ -190,5 +185,13 @@ ul.links,
 }
 
 .links.inline li:last-child:after {
+  content: '';
+}
+
+.links.inline .node-readmore {
+  display: block;
+}
+
+.links.inline .node-readmore:after {
   content: '';
 }
