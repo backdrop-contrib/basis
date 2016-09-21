@@ -9,7 +9,7 @@
  *
  * @see maintenance_page.tpl.php
  */
-function basis_preprocess_page(&$variables) {
+function basis_contrib_preprocess_page(&$variables) {
   $node = menu_get_object();
 
   // Add the OpenSans font from core on every page of the site.
@@ -32,7 +32,7 @@ function basis_preprocess_page(&$variables) {
  *
  * @see layout.tpl.php
  */
-function basis_preprocess_layout(&$variables) {
+function basis_contrib_preprocess_layout(&$variables) {
   if ($variables['is_front']) {
     $variables['classes'][] = 'layout-front';
   }
@@ -43,7 +43,7 @@ function basis_preprocess_layout(&$variables) {
  *
  * @see header.tpl.php
  */
-function basis_preprocess_header(&$variables) {
+function basis_contrib_preprocess_header(&$variables) {
   $logo = $variables['logo'];
 
   // Add classes and height/width to logo.
@@ -69,7 +69,7 @@ function basis_preprocess_header(&$variables) {
  *
  * @see theme_menu_local_tasks().
  */
-function basis_preprocess_menu_local_tasks(&$variables) {
+function basis_contrib_preprocess_menu_local_tasks(&$variables) {
   $theme_path = backdrop_get_path('theme', 'basis');
   backdrop_add_css($theme_path . '/css/component/admin-tabs.css', array('group' => CSS_THEME));
 }
@@ -79,7 +79,7 @@ function basis_preprocess_menu_local_tasks(&$variables) {
  *
  * @see theme_fieldset().
  */
-function basis_preprocess_fieldset(&$variables) {
+function basis_contrib_preprocess_fieldset(&$variables) {
   $theme_path = backdrop_get_path('theme', 'basis');
   backdrop_add_css($theme_path . '/css/component/fieldset.css', array('group' => CSS_THEME));
 }
@@ -89,7 +89,7 @@ function basis_preprocess_fieldset(&$variables) {
  *
  * @see theme_vertical_tabs().
  */
-function basis_preprocess_vertical_tabs(&$variables) {
+function basis_contrib_preprocess_vertical_tabs(&$variables) {
   $theme_path = backdrop_get_path('theme', 'basis');
   backdrop_add_css($theme_path . '/css/component/vertical-tabs.css', array('group' => CSS_THEME));
 }
@@ -99,7 +99,7 @@ function basis_preprocess_vertical_tabs(&$variables) {
  *
  * @see block.tpl.php
  */
-function basis_preprocess_block(&$variables) {
+function basis_contrib_preprocess_block(&$variables) {
   $theme_path = backdrop_get_path('theme', 'basis');
 
   // Add component CSS if there's a hero on the page.
@@ -115,7 +115,7 @@ function basis_preprocess_block(&$variables) {
  *
  * @see theme_breadcrumb().
  */
-function basis_breadcrumb($variables) {
+function basis_contrib_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   $output = '';
   if (!empty($breadcrumb)) {
